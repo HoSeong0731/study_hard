@@ -1,0 +1,58 @@
+1. 숫자 (A>K>...>2)
+2. 문양 (S>H>C>D) 단, 풀하우스는 숫자만
+
+3. 모든 게임 정보는 구조체에 들어가야한다.
+struct information{
+	char TeamA[10]
+	char TeamB[10]
+}
+
+4. 게임의 번호를 부른다(몇 번째 줄인지 부른다.)/선택(1일때 전부 다 출력, 2일때 한 줄 출력, 3일때 그 줄의 게임 정보 삭제, 4나가기, 그 외 다시 입력)
+단, 게임을 삭제시 그 줄은 비어있고 위로 딸려 올라 와서는 안 됨.
+결론: 일단 처음에 다 읽고, 동적할당으로 한 다음 쭉 올라가게끔 한다. 그리고 프로그램 내에서만 그 게임을 삭제 한다.
+
+5. 후에 free()써서 다 비워줄 것(exit로 갈 시)
+
+6. 읽는 텍스트 파일이 오류일 경우 예외처리 할 것
+
+7. 입력이 잘못되었을 경우 예외 처리
+
+8. 게임번호는 4까지만 존재하게 하고 그 이상을 누를시 예외 처리
+
+포카드(count = 4)
+aaaab
+abbbb
+
+풀하우스(count = 4)
+aabbb
+aaabb
+
+트리플(count = 2)
+aaabc
+abbbc
+abccc
+
+투페어(count = 2)
+aabbc
+abbcc
+aabcc
+
+원페어(count = 1)
+aabcd
+abbcd
+abccd
+abcdd
+
+탑else(count = 0)
+abcde
+
+for (i=0;i<4;i++)
+	for(j=0;j<4-i;j++)
+		{
+		 if(card[2*i] == card[2+[2*j]+[2*i])
+		 count++
+		}
+
+if (count == 1)
+	num = 1;
+elif (count == 2)//one pair

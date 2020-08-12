@@ -1,0 +1,32 @@
+﻿  main.c
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(28,15): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(29,15): warning C4553: '==': 식의 결과가 사용되지 않습니다. '='을(를) 의도했습니까?
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(103,22): warning C4047: '함수': 'char *'의 간접 참조 수준이 'char (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(103,22): warning C4024: 'sort': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(103,37): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(103,37): warning C4024: 'sort': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(104,22): warning C4047: '함수': 'char *'의 간접 참조 수준이 'char (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(104,22): warning C4024: 'sort': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(104,37): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(104,37): warning C4024: 'sort': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(105,50): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(105,50): warning C4024: 'straight_check': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(106,50): warning C4047: '함수': 'int *'의 간접 참조 수준이 'int (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(106,50): warning C4024: 'straight_check': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(107,43): warning C4047: '함수': 'char *'의 간접 참조 수준이 'char (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(107,43): warning C4024: 'flush_check': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(108,43): warning C4047: '함수': 'char *'의 간접 참조 수준이 'char (*)[5]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(108,43): warning C4024: 'flush_check': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(113,29): warning C4047: '함수': 'char *'의 간접 참조 수준이 'char (*)[11]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(113,29): warning C4024: 're_mapping': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(114,29): warning C4047: '함수': 'char *'의 간접 참조 수준이 'char (*)[11]'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(114,29): warning C4024: 're_mapping': 형식 및 실제 매개 변수 1의 형식이 서로 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(162,20): warning C4305: '=': 'int'에서 'char'(으)로 잘립니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(164,20): warning C4305: '=': 'int'에서 'char'(으)로 잘립니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(166,20): warning C4305: '=': 'int'에서 'char'(으)로 잘립니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(168,20): warning C4305: '=': 'int'에서 'char'(으)로 잘립니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(170,20): warning C4305: '=': 'int'에서 'char'(으)로 잘립니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(221,22): warning C4047: '=': 'char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(225,22): warning C4047: '=': 'char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\main.c(248): warning C4716: 'straight_check': 값을 반환해야 합니다.
+  hw2_2.vcxproj -> C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_2\Debug\hw2_2.exe

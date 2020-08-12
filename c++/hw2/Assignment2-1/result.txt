@@ -1,0 +1,2 @@
+Kw Typing Verification Program
+정확도: 0           속도(타자/s): 0

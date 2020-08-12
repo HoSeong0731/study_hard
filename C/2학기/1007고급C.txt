@@ -1,0 +1,148 @@
+/*
+#include <stdio.h>
+int main()
+{
+	int ch1, ch2;
+
+	ch1 = getchar();		//하나의 문자를 받는 함수(getchar 1개)
+	ch2 = fgetc(stdin);		//하나의 문자를 받는 함수(fetc 1개)
+
+	putchar(ch1);			//처음 문자하나
+	fputc(ch2, stdout);		//다음 문자하나
+	return 0;	//main함수종료
+}
+
+#include <stdio.h>
+int main()
+{
+	int ch;
+
+	while (1)
+	{
+		ch = getchar();
+		if (ch == EOF)
+			break;
+		putchar(ch);
+	}
+	return 0;
+}
+
+#include <stdio.h>
+int main()
+{
+	char * str = "simple string";
+
+	printf("1.puts test ------\n");
+	puts(str);
+	puts("so simple string");
+
+	printf("2. fputs test ------\n");
+	puts(str);
+	puts("so simple string", stdout); printf("\n");
+
+	printf("3. end of main------\n");
+	return 0;
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+	char str[7];
+	int i;
+
+	for (i = 0; i < 3; i++)
+	{
+		fgets(str, sizeof(str), stdin);
+		printf("Read %d: %s \n", i + 1, str);
+		return 0;
+	}
+}
+
+#include <stdio.h>
+int main()
+{
+	char perID[7];
+	char name[10];
+
+	fputs("주민번호 앞 6자리 입력: ", stdout);
+	fgets(perID, sizeof(perID), stdin);
+
+	fputs("이름 입력: ", stdout);
+	fgets(name, sizeof(name), stdin);
+
+	printf("주민번호: %s \n", perID);
+	printf("이름: %s \n", name);
+	return 0;
+}
+
+
+#include <stdio.h>
+
+void Clear()
+{
+	while (gerchar() != '\n');
+}
+
+int main()
+{
+	char perID[7];
+	char name[10];
+
+	fputs("주민번호 앞 6자리 입력: ", stdout);
+	fgets(perID, sizeof(perID), stdin);
+	clear();
+
+	fputs("이름 입력: ", stdout);
+	fgets(name, sizeof(name), stdin);
+
+	printf("주민번호: %s \n", perID);
+	printf("이름: %s \n", name);
+	return 0;
+}
+
+
+#include <stdio.h>
+void RemoveBSN(char str[])
+{
+	int len = strlen(str);
+	str[len - 1] = 0;
+}
+
+int main()
+{
+	char str[100];
+	printf("문자열 입력: ");
+	fgets(str, sizeof(str), stdin);
+	printf("같이: %d, 내용: %d \n", strlen(str), str);
+
+	RemoveBSN(str);
+	printf("길이: %d, 내용: %d %s \n", strlen(str), str);
+	return 0;
+}
+
+*/
+/*
+#include <stdio.h>
+int main()
+{
+	char str1[20] = "1234567890";
+	char str2[20];
+	char str3[5];
+
+	//1
+	strcpy(str2, str1);
+	puts(str2);
+
+	//2
+	strncpy(str3, str1, sizeof(str3));
+	puts(str3);
+
+	//3
+	strncpy(str3, str1, sizeof(str3) - 1);
+	str3[sizeof(str3) - 1] = 0;
+	puts(str3);
+	return 0;
+}
+*/

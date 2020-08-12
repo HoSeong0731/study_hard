@@ -1,0 +1,3 @@
+Hello I'm an apple.
+Do you know OOP?
+So, easy to do programming!

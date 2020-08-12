@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_1\main.c(60,6): warning C4101: 'text' :참조되지 않은 지역 변수입니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_1\main.c(37): warning C4715: 'error2': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_1\main.c(31): warning C4715: 'error1': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  hw2_1.vcxproj -> C:\Users\Ko--pc\Desktop\C소스\씨프 2차과제\c_hw2_2019202052_KimHoseong\hw2_1\Debug\hw2_1.exe

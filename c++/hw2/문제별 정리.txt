@@ -1,0 +1,223 @@
+1.
+타자 연습 프로그램 작성
+-파일 입출력
+-정확도, 속도 필요
+-타자속도는 (타자/s)
+-시간측정은 입력시작 부터
+-정확도 맞춘 스펠링의 수 / 스펠링수
+
+다음 문장이 없다면 return 0;
+result에 저장할 것.
+#include <iostream>
+#include<fstream>
+using namespace std;
+
+int main()
+{
+	ifsttream fin("input.txt");
+	ofstream fout("output.txt");
+	
+	char str[100];
+	
+	if (!fin.is_open()){
+		cout << "No file!: << endl;
+		return 0;
+	}
+	fin.getline(str,100);
+	
+	fout << "Hello World!" << endl;
+
+	fin.close():
+	fout.close();
+	
+	return 0;
+}
+
+시간 측정
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+	time_t start,end;
+	
+	start = tim(NULL);
+	system("PAUSE");
+	end = time(NULL);
+	cout << end = start << endl;
+	
+	return 0;
+}
+
+화면초기화
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int a;
+	cout << "Hello world!" << endl;
+	cin >> a;
+	system("cls");
+	
+	return 0;
+}
+예외처리
+소수점 첫째자리 까지만 출력
+정확도 오버로 타자쳤을 때 내리기
+
+2.
+2차원 배열과 포인터의 관계
+포인터 변수는 다른 변수의 주소를 나타 낼 수 있다.
+(h,i) -> a -> 1
+j -> c -> 2
+d - > 3
+b -> 4
+e -> 1 2 3 
+f -> 4 5 6
+g -> 1 2 3 4 5 6
+
+3.
+행과 열을 입력해서 뱅글 뱅글 돌아가는 숫자 출력
+-동적할당 해야 함.
+
+4.
+특정 문자열을 읽고 변경할 수 있는 함수 만들기
+char*my_strstr(char*str,char*strsearch,char*strChange);
+원본 문자열,찾는 문자열, 변경 문자열
+#inlcude <iostream>
+#include <cstring>
+-동적할당, 파일 입출력
+-strstr(문자열 찾기)
+변수, "찾는 문자열"
+-ctrncpy(찾은 값 변경)
+-puts(출력)
+if (!test) => 변수가 null일 때 cout<<
+원본 문자열을 입력하고
+변경 전 문자열 입력하세요(찾기)
+변경 후 문자열을 입력하세요(그 부분 변경하기)
+변경된 결과 출력(cout)
+경고
+string 함수 쓰지 말기.(본인이 직접 구현할 것)
+사이즈 100이상으로 하지 말 것
+
+5.
+환자의 개인정보를 저장하는 클래스를 구현
+이름, 주소, 주민번호, 전화번호등을 입력받음.
+data를 저장하고, 출력해야 함.
+class PatientInfo
+{
+private:
+	char* name;
+	char* address;
+	int registration_number;
+	int phone_number;
+public:
+	PatientInfo(char* name, char* address, int registration_number, int phone_number)
+	~PatientInfo;
+
+	char*getName();
+	char*getAddress();
+	int get_R_Number;
+	int get_P_Number;
+};
+-숫자에 대한 예외처리
+
+6.
+369게임을 클래스 처리
+-369가 들어가면 !출력(갯수만큼)
+-10단위로 enter
+-300까지만
+int main(){
+	int num;;
+	ThreeSixNine game;
+	
+	cout << "input your number"<<endl
+	cin >> num;
+
+	game.print369(num);
+	cout << endl;
+	
+	return 0;
+}
+
+7.
+마스크 판매 클래스
+case문 출력(0~6)
+ 0종료
+ 1재고
+ 2가격
+ 3구매
+ 4갯수확인
+ 5잔고확인
+예외처리
+-마스크 또는 잔고 재고 부족 출력
+-아까 배운 거 화면 초기화 쓸 것
+약사클래스(마스크 재고, 마스크 가격)
+구매자클래스(보유한 마스크, 보유한 금액)
+
+8.
+숫자(소수점이여도 상관없다.) 대문자 소문자 대문자
+그리고 input error예외처리
+메인을 반복
+안내문구 출력
+입력된 문장 분리
+입력된 문장에 문제가 없는지 확인
+입력된 문장에 맞는 클래스 실행
+
+클래스와 상속을 사용하여 프로그램을 작성한다.
+환전
+class
+-Exchange(부모)
+-ToKRW(나머지 상속)
+-ToUSD
+-ToJPY
+-ToEUR
+-ToCNY (최소)
+(첫번째 소수점 자리에서 반올림)
+123.5 => 124
+123.4 => 123
+KRW:USD = 1200:1
+KRW:JPY = 1100:100
+KRW:EUR =1300:1
+KRW:CNY = 170:1
+
+Would like continue?
+Y,y 계속
+N,n return 0;
+
+연구 좀 더 할 것
+
+9.(2점짜리)
+포켓몬(가장어려움)
+U -> up
+D -> down
+L -> left
+R -> right
+Move ar Attack
+색깔은 공격 범위(공격 방향은 오른쪽 왼쪽만 가능하도록)
+불 -> 물 -> 풀 -> 불
+전기(상성 없음)
+모든 캐릭터의 공격력은 2(상성이 약하면 1 강하면 3)
+모든 캐릭터의 피는 3, 피가 0이면 캐릭터의 메모리 할당 해제
+필드 9X9
+배치는 파이리 꼬복이 피카추 이상해씨 순서로
+-이름 지정하게 함.
+-class 만듬 
+-상속을 받을 때 오버라이딩
+-공격범위에 포켓몬 없으면 빗나갔다
+-아군은 데미지를 받지 않는다.
+-클래스 만든다
+-dynamic allocation제외 메인함수를 수정할 수 없다.
+플레이어 이름이 "default"인지 아닌지 판단
+플레이어 1 및 플레이어 2 동적할당
+player.h
+player.cpp
+-각 플레이어의 포켓몬 출력
+-각 플레이어가 가진 포켓몬의 HP출력
+-포켓몬의 사망 여부를 확인
+-공격 방향에 따른 전투
+
+공통
+debug폴더 지우기
