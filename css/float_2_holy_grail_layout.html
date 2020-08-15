@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+    .container{
+      width:540px;
+      border:1px solid gray;
+      margin:auto;
+    }
+    header{
+      border-bottom: 1px solid gray;
+    }
+    nav{
+      float:left;
+      width:120px;
+      border-right:1px solid gray;
+    }
+    article{
+      float:left;
+      width:300px;
+      border-left:1px solid gray;
+      border-right:1px solid gray;
+      margin-left:-1px;
+    }
+    aside{
+      float:left;
+      width:120px;
+      border-left:1px solid gray;
+      margin-left:-1px;
+    }
+    footer{
+      clear:both;
+      border-top:1px solid gray;
+      text-align: center;
+      padding:20px;
+    }
+  </style>
+</head>
+<body>
+ <div class="container">
+    <header>
+    <h1>
+      CSS
+    </h1>
+    </header>
+    <nav>
+      <ul>
+        <li>position</li>
+        <li>float</li>
+        <li>flex</li>
+      </ul>  
+    </nav>
+    <article>
+      <h2>float</h2>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit quae earum enim ab distinctio corrupti eius reprehenderit non, rerum ut nisi autem cum sint perferendis eum id velit, molestias nesciunt. Ullam dignissimos consequuntur explicabo id voluptas vel deleniti nesciunt veritatis iusto commodi, laudantium cumque vero deserunt laboriosam. Ea, quia est?
+    </article>
+    <aside>
+      ad  
+    </aside>
+    <footer>
+      copyleft  
+    </footer>
+ </div>
+   
+</body>
+</html>
