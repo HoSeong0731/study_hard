@@ -1,0 +1,693 @@
+<!--남은일
+1. class이름 바꾸기
+2. 사진 찾기
+3. 칸 맞추기
+4. 스토리칸 px간격 맞추기 -> 그림 원형으로 바꿀 수 있다.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width">
+        <link href="http://fonts.googleapis.com/earlyaccess/hanna.css" rel="stylesheet">
+        <style>
+            div {
+                flex-shrink: 0;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                background-color: rgba(230,230,230);
+                }
+            .topbar{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 29px;
+                background-color: white;
+                color:black;
+                position: fixed;
+                top:0;
+                left:0;
+                right:0;
+                width:100%;
+                height:44px;
+                
+            }
+            .bottombar{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: rgba(240,240,240);
+                color:black;
+                position:fixed;
+                width:100%;
+                height:50px ;
+                bottom:0;
+            }
+            .story{
+                display:flex;
+                display:block;
+                flex-direction: column;
+                font-size:x-small;
+                justify-content: center;
+                height: 122px;
+                padding: 0 4px;
+                top: 2px;
+                left:0;
+                width: 80px;
+                
+            }
+            .rok{
+                display: flex;
+                align-content: center;
+                width: 100%;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .ink{
+                outline: 0;
+                overflow:auto hidden;
+                background-color: rgba(240,240,240);
+                border-top-style: solid;
+                border-top-width: 1px;
+                border-top-color: rgba(200,200,200);
+                width:auto;
+                display: flex;
+                flex-direction: row;
+                height:120px;
+                top: 45px;
+                padding:10px 0;
+            }
+            body{
+                margin:0;
+                
+            }
+            .test{
+                background-color: white;
+            }
+            .tit{
+                display:flex;
+                flex-direction: row;
+                height:60px;
+                align-items: center;
+                width:100%;
+                justify-content: space-between;
+                
+            }
+            .post1_1{
+                display: block;
+                display: flex;
+                align-self:center;
+                justify-content: center;
+                flex:0 0 0;
+            }
+            .post1_2{
+                margin-left: 12px;
+                display: flex;
+                width:100%;
+                flex-grow: 1;
+                flex-shrink: 1;
+                align-items:flex-start;
+            }
+            .post1_3{
+                padding:8px;
+            }
+            .bobo{
+                
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding:16px;
+            }
+            .bar{
+                padding-top: 4px;
+                display:flex;
+                flex-direction: row;
+                height:40px;
+                align-items: center;
+            }
+            .three{
+                display:flex;
+                width:100%;
+                flex-grow: 1;
+                flex-shrink: 1;
+                align-items: center;
+                padding:8px;
+            }
+            .tone,.ttwo,.tthree{
+                padding:8px;
+            }
+            .good{
+                display:flex;
+                
+                align-items: center;
+                margin-left: 16px;
+            }
+            .good_font{
+                font-size:small;
+                padding-left: 8px;
+            }
+            .comment{
+                font-size:small;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+           
+            p{
+                border-color: dodgerblue;
+                border-style: solid;
+                border-width: 2px;
+                background-color: rgba(30,144,211,0.2);
+                font-size:20px;
+                font-family: 'Hanna', sans-serif;
+            }
+            #last
+            {
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ink">
+            <div class="rok">
+                <div class="story">
+                    <img src="./user.jpg" width="56" height="56">
+                    <div>내 스토리</div>
+                </div>
+                <div class="story">
+                    <img src="./user.jpg" width="56" height="56">
+                    <div>friend1</div>
+                </div>
+                <div class="story">
+                    <img src="./user.jpg" width="56" height="56">
+                    <div>friend2</div>
+                </div>
+                <div class="story">
+                    <img src="./user.jpg" width="56" height="56">
+                    <div>friend3</div>
+                </div>
+                <div class="story">
+                    <img src="./user.jpg" width="56" height="56">
+                    <div>friend4</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="test">
+
+
+            <article> <!-- 1번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">   
+                        puuu_moll_1024  <!--인스타 ID-->
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./1225.jpg' width='375.2px' height='375.2px'> <!-- 게시글 사진(큰 거) -->
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 1225명이 좋아합니다
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 애들이랑 함께 한 크리스마스
+                    </div>
+                </div>
+            </article>
+
+
+            <article> <!-- 2번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">
+                        puuu_moll_1024
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./1229.jpg' width='375.2px' height='375.2px'> 
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 1229명이 좋아합니다
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 미아사거리에서 커플신발, 커플링 맞춘 날
+                    </div>
+                </div>
+            </article>
+
+
+            <article> <!--3번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">
+                        puuu_moll_1024
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./109110.jpg' width='375.2px' height='375.2px'>
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 109110명이 좋아합니다
+                    </div>
+                </div>
+                <div class="comment" id='last'>
+                    <div>
+                        <b>puuu_moll_1024</b> 롯데호텔에서 분위기 낸 날
+                    </div>
+                </div>
+            </article>
+
+            <article> <!-- 4번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">   
+                        puuu_moll_1024  <!--인스타 ID-->
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./129130.jpg' width='375.2px' height='375.2px'> <!-- 게시글 사진(큰 거) -->
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 129130명이 좋아합니다.
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 수빈이 순창 들린 날
+                    </div>
+                </div>
+            </article>
+
+            <article> <!-- 5번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">   
+                        puuu_moll_1024  <!--인스타 ID-->
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./131.jpg' width='375.2px' height='375.2px'> <!-- 게시글 사진(큰 거) -->
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 131명이 좋아합니다.
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 100일
+                    </div>
+                </div>
+            </article>
+
+            <article> <!-- 6번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">   
+                        puuu_moll_1024  <!--인스타 ID-->
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./204206.jpg' width='375.2px' height='375.2px'> <!-- 게시글 사진(큰 거) -->
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 204206명이 좋아합니다.
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 강릉에서 첫 국내여행
+                    </div>
+                </div>
+            </article>
+
+            <article> <!-- 7번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">   
+                        puuu_moll_1024  <!--인스타 ID-->
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./327.jpg' width='375.2px' height='375.2px'> <!-- 게시글 사진(큰 거) -->
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 327명이 좋아합니다.
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 노천극장에서 한강기분 내다가...
+                    </div>
+                </div>
+            </article>
+
+            <article> <!-- 8번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">   
+                        puuu_moll_1024  <!--인스타 ID-->
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./425.jpg' width='375.2px' height='375.2px'> <!-- 게시글 사진(큰 거) -->
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 425명이 좋아합니다.
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 호성이가 짠 공릉데이트
+                    </div>
+                </div>
+            </article>
+
+            <article> <!-- 9번째 게시글-->
+                <div class="tit">
+                    <div class="bobo">
+                    <div class="post1_1">
+                        <img src="./user.jpg" width='32' height='32'>
+                        
+                    </div>
+                    <div class="post1_2">   
+                        puuu_moll_1024  <!--인스타 ID-->
+                    </div>
+                    </div>
+                    <div class="post1_3">
+                        <img src="./dot.png" width='36' height='36'>
+                    </div>
+                </div>
+                <div>
+                    <img src='./630.jpg' width='375.2px' height='375.2px'> <!-- 게시글 사진(큰 거) -->
+                </div>
+                <div class='bar'>
+                    <div class='three'>
+                        <span class='tone'>
+                            <img src='./heart.png' width='24' height='24'>
+                        </span>
+                        <span class='ttwo'>
+                            <img src='./eotrmf.png' width='24' height='24'>
+                        </span>
+                            <span class='tthree'>
+                                <img src='./airplane.png' width='24' height='24'>
+                        </span>
+                    </div>
+                        
+                    <div class='fo'>
+                        <img src='./bookmark.png' width='24' height='24'>
+                    </div>
+                </div>
+                <div class='good'>
+                    <div>
+                        <img src='./user.jpg' width="20" height='20'>
+                    </div>
+                    <div class='good_font'>
+                        김호성님 외 630명이 좋아합니다.
+                    </div>
+                </div>
+                <div class="comment">
+                    <div>
+                        <b>puuu_moll_1024</b> 수빈이 광운대에서 생일파티 한 날
+                    </div>
+                </div>
+            </article>
+           <!--
+            <p>
+                안녕 애기 지금 시간은 8.17일 8:45분이야.<br>
+                너랑 같이 자고 얼떨결에 6시30분에 일어나 버렸지 뭐야..<br>
+                그래서 지금은 편지를 쓰고 있어 ㅋㅋㅋㅋ<br>
+                너는 300일 선물로 손편지를 원했지만, 나는 너가 지나가면서 수빈이 웹페이지 만들어달라는 말을 기억하고 이걸 하고 있어.<br>
+                클론코딩도 해야하기도 하고, 너가 인스타 좋아하기도 해서 여기에 편지까지 남긴다. ㅎㅎ<br>
+                아무튼, 게시글 순서는 오래된 순서로 내가 너랑 연애하면서 기억에 많이 남는 순간들이야.<br>
+                왜 여기에 이거는 없어?? 할 수도 있지만,,, 필요하면 더 넣어줄게요 ㅎㅎ<br>
+                이 과제는 우리 300일을 먼저 축하하고, 그 다음에 과제제출에 올릴 거야.(편지 부분은 지우고 올려야 하거든..)<br>
+                아무튼 틱틱대며, 300일까지 왔어. 나한테는 지금까지 했던 연애 중 가장 길게 한 연애야.<br>
+                내가 연애를 많이 해본 편이긴 하지만, 너한테도 말했듯이 한 번 싸우면 헤어지던 연애가 아닌게 처음이고, 그러다 보니 내가 널 서운하게 했던 적도 있었을 것 같아.<br>
+                그래도 나 놓지 않고 지금까지 연애해줘서 고맙고 사랑해.<br>
+                앞으로도 오래가자 300일 진심으로 축하해<br>
+                -몰리가 푸딩에게-
+            </p>-->
+            <br> <!-- 하단 바 생각해서 만든 공간-->
+            <br>
+            <br>
+        </div>
+            
+        <div class="topbar">
+                
+            <img  src="./camara.png" width="24" height="24">
+            instagram
+            
+            <img  src="./airplane.png" width="24" height="24">
+        </div>
+        <div class="bottombar">
+            <img  src="./home.png" width="24" height="24">
+            <a href='https://www.instagram.com/explore/'>  <img  src="./search.png" width="24" height="24"></a>
+            <img  src="./upload.png" width="24" height="24">
+            <img  src="./heart.png" width="24" height="24">
+            <a href='https://www.instagram.com/puuu_moll_1024/'><img  src="./user.jpg" width="24" height="24"></a>
+        </div>
+    </body>
+        
+            
+        
+
+</html>
