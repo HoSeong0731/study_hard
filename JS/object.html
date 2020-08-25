@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <script>
+            var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+            var grade2 = {};
+            grade2 ['hi'] = 10;
+            grade2 ['hi2'] = 20;
+            grade2 ['hi3'] = 90;
+            var grade3 = new Object();
+            grade3 ['hi'] = 10;
+            grade3 ['hi2'] = 20;
+            grade3 ['hi3'] = 90;
+            alert(grade2['hi']);
+            alert(grades.sorialgi);
+            var grade4 = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+            for(key in grade4){
+                document.write("key : "+key+" value : "+grades[key]+"<br />");
+            }
+            var grade6 = {
+                'list': {'egoing': 10, 'k8805': 6, 'sorialgi': 80},
+                'show': function(){
+                    for(var name in this.list){
+                        document.write(name+'this.list[name]'+"<br />");
+                
+                    }
+                }
+            };
+            grade6.show();
+        </script>
+    </body>
+</html>
