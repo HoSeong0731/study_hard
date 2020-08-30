@@ -1,0 +1,15 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var vscope = 'global';
+            function fscope(){
+                var vscope = 'local';
+                alert(vscope);
+            }
+            fscope();
+            alert(vscope);
+        </script>
+    </body>
+</html>

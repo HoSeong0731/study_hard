@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function person(){}
+            var p = new person();
+            p.name = 'junjunJJang';
+            p.introduce = function(){
+                return 'My nam is '+this.name;
+            }
+            document.write(p.introduce());
+
+            function Person(name){
+                this.name = name;
+                this.introduce = function(){
+                    return 'My name is' + this.name;
+                }
+            }
+            var p1 = new Person('hoseong');
+            document.write(p1.introduce()+"<br />");
+            var p2 = new Person('hoseong2');
+            document.write(p2.introduce());
+        </script>
+    
+    </body>
+</html>
