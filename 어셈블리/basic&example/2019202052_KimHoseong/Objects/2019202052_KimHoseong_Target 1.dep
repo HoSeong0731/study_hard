@@ -1,0 +1,3 @@
+Dependencies for Project '2019202052_KimHoseong', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (.\test.s)(0x5F5CD476)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529"--list .\listings\test.lst --xref -o .\objects\test.o --depend .\objects\test.d)

@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/jjaa7/Desktop/XOR/_XOR.v
+source_file = 1, C:/Users/jjaa7/Desktop/XOR/tb_XOR.v
+source_file = 1, C:/Users/jjaa7/Desktop/XOR/db/assign1.cbx.xml
+design_name = _XOR
+instance = comp, \y~output , y~output, _XOR, 1
+instance = comp, \a~input , a~input, _XOR, 1
+instance = comp, \b~input , b~input, _XOR, 1
+instance = comp, \y~0 , y~0, _XOR, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _XOR, 1

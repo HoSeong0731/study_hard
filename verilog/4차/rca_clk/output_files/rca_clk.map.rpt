@@ -1,0 +1,405 @@
+Analysis & Synthesis report for rca_clk
+Mon Sep 28 22:48:24 2020
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Sep 28 22:48:24 2020       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; rca_clk                                     ;
+; Top-level Entity Name           ; rca_clk                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 98                                          ;
+; Total pins                      ; 99                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; rca_clk            ; rca_clk            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; ha.v                             ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/rca_clk/ha.v      ;         ;
+; gates.v                          ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/rca_clk/gates.v   ;         ;
+; fa_v2.v                          ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/rca_clk/fa_v2.v   ;         ;
+; rca4.v                           ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/rca_clk/rca4.v    ;         ;
+; rca32.v                          ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/rca_clk/rca32.v   ;         ;
+; rca_clk.v                        ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/rca_clk/rca_clk.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 57          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 48          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 0           ;
+;     -- 5 input functions                    ; 32          ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 16          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 98          ;
+;                                             ;             ;
+; I/O pins                                    ; 99          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 98          ;
+; Total fan-out                               ; 536         ;
+; Average fan-out                             ; 1.56        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                            ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                      ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------+--------------+
+; |rca_clk                   ; 48 (0)            ; 98 (98)      ; 0                 ; 0          ; 99   ; 0            ; |rca_clk                                                 ; work         ;
+;    |rca32:U0_rca32|        ; 48 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32                                  ; work         ;
+;       |rca4:U0_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U0_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
+;       |rca4:U1_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U1_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
+;       |rca4:U2_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U2_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
+;       |rca4:U3_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U3_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
+;       |rca4:U4_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U4_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
+;       |rca4:U5_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U5_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
+;       |rca4:U6_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U6_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
+;       |rca4:U7_rca4|       ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4                     ; work         ;
+;          |fa:U0_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U0_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U0_fa|ha:U1_ha   ; work         ;
+;          |fa:U1_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U1_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U1_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U1_fa|ha:U1_ha   ; work         ;
+;          |fa:U2_fa|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U2_fa            ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U2_fa|ha:U1_ha   ; work         ;
+;          |fa:U3_fa|        ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U3_fa            ; work         ;
+;             |_or2:U2_or|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U3_fa|_or2:U2_or ; work         ;
+;             |ha:U1_ha|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |rca_clk|rca32:U0_rca32|rca4:U7_rca4|fa:U3_fa|ha:U1_ha   ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+----------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 98    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 98                          ;
+;     plain             ; 98                          ;
+; arriav_lcell_comb     ; 48                          ;
+;     normal            ; 48                          ;
+;         3 data inputs ; 16                          ;
+;         5 data inputs ; 32                          ;
+; boundary_port         ; 99                          ;
+;                       ;                             ;
+; Max LUT depth         ; 16.00                       ;
+; Average LUT depth     ; 5.13                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Mon Sep 28 22:48:15 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rca_clk -c rca_clk
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ha.v
+    Info (12023): Found entity 1: ha File: C:/Users/jjaa7/Desktop/rca_clk/ha.v Line: 1
+Info (12021): Found 11 design units, including 11 entities, in source file gates.v
+    Info (12023): Found entity 1: _inv File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 1
+    Info (12023): Found entity 2: _nand2 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 7
+    Info (12023): Found entity 3: _and2 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 13
+    Info (12023): Found entity 4: _or2 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 19
+    Info (12023): Found entity 5: _xor2 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 25
+    Info (12023): Found entity 6: _and3 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 37
+    Info (12023): Found entity 7: _and4 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 43
+    Info (12023): Found entity 8: _and5 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 49
+    Info (12023): Found entity 9: _or3 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 55
+    Info (12023): Found entity 10: _or4 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 61
+    Info (12023): Found entity 11: _or5 File: C:/Users/jjaa7/Desktop/rca_clk/gates.v Line: 67
+Info (12021): Found 1 design units, including 1 entities, in source file fa_v2.v
+    Info (12023): Found entity 1: fa File: C:/Users/jjaa7/Desktop/rca_clk/fa_v2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rca4.v
+    Info (12023): Found entity 1: rca4 File: C:/Users/jjaa7/Desktop/rca_clk/rca4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rca32.v
+    Info (12023): Found entity 1: rca32 File: C:/Users/jjaa7/Desktop/rca_clk/rca32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rca_clk.v
+    Info (12023): Found entity 1: rca_clk File: C:/Users/jjaa7/Desktop/rca_clk/rca_clk.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_rca_clk.v
+    Info (12023): Found entity 1: tb_rca_clk File: C:/Users/jjaa7/Desktop/rca_clk/tb_rca_clk.v Line: 3
+Info (12127): Elaborating entity "rca_clk" for the top level hierarchy
+Info (12128): Elaborating entity "rca32" for hierarchy "rca32:U0_rca32" File: C:/Users/jjaa7/Desktop/rca_clk/rca_clk.v Line: 25
+Info (12128): Elaborating entity "rca4" for hierarchy "rca32:U0_rca32|rca4:U0_rca4" File: C:/Users/jjaa7/Desktop/rca_clk/rca32.v Line: 7
+Info (12128): Elaborating entity "fa" for hierarchy "rca32:U0_rca32|rca4:U0_rca4|fa:U0_fa" File: C:/Users/jjaa7/Desktop/rca_clk/rca4.v Line: 7
+Info (12128): Elaborating entity "ha" for hierarchy "rca32:U0_rca32|rca4:U0_rca4|fa:U0_fa|ha:U0_ha" File: C:/Users/jjaa7/Desktop/rca_clk/fa_v2.v Line: 5
+Info (12128): Elaborating entity "_or2" for hierarchy "rca32:U0_rca32|rca4:U0_rca4|fa:U0_fa|_or2:U2_or" File: C:/Users/jjaa7/Desktop/rca_clk/fa_v2.v Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 212 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 66 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 113 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 5033 megabytes
+    Info: Processing ended: Mon Sep 28 22:48:24 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
+
+

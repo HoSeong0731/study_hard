@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/jjaa7/Desktop/NAND/_nand2.v
+source_file = 1, C:/Users/jjaa7/Desktop/NAND/tb_nand2.v
+source_file = 1, C:/Users/jjaa7/Desktop/NAND/db/NAND.cbx.xml
+design_name = _nand2
+instance = comp, \y~output , y~output, _nand2, 1
+instance = comp, \a~input , a~input, _nand2, 1
+instance = comp, \b~input , b~input, _nand2, 1
+instance = comp, \y~0 , y~0, _nand2, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _nand2, 1

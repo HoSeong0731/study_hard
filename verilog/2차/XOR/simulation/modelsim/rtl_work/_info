@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jjaa7/Desktop/XOR/simulation/modelsim
+v_XOR
+Z1 !s110 1600022312
+!i10b 1
+!s100 ge3PYzdJFRU`WBl1d:NS^3
+Ik[lbi3ijzMiUHMFO9@BQ@0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1600020887
+8C:/Users/jjaa7/Desktop/XOR/_XOR.v
+FC:/Users/jjaa7/Desktop/XOR/_XOR.v
+L0 1
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1600022312.000000
+!s107 C:/Users/jjaa7/Desktop/XOR/_XOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/XOR|C:/Users/jjaa7/Desktop/XOR/_XOR.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/XOR
+n@_@x@o@r
+vtb_XOR
+R1
+!i10b 1
+!s100 XHTAd^1OakoE[jXQcU^G]0
+IG0]?N8k6f`za[M0O6liZ13
+R2
+R0
+w1600021093
+8C:/Users/jjaa7/Desktop/XOR/tb_XOR.v
+FC:/Users/jjaa7/Desktop/XOR/tb_XOR.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/jjaa7/Desktop/XOR/tb_XOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/XOR|C:/Users/jjaa7/Desktop/XOR/tb_XOR.v|
+!i113 1
+R5
+R6
+ntb_@x@o@r

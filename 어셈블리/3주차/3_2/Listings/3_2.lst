@@ -1,0 +1,92 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         Main
+    5 00000000 E59F0028        LDR              r0, Address ;Insert address val
+                                                            ue
+    6 00000004 E3A01001        MOV              r1, #1      ;Insert value
+    7 00000008 E1A02081        MOV              r2,r1,LSL #1 ;Shift the bit str
+                                                            eam to the left by 
+                                                            a 1
+    8 0000000C E1A03102        MOV              r3,r2,LSL #2 ;Shift the bit str
+                                                            eam to the left by 
+                                                            a 2
+    9 00000010 E0824003        ADD              r4,r2,r3    ;Add r2 and r3 to r
+                                                            4
+   10 00000014         
+   11 00000014         Loop
+   12 00000014 E0865004        ADD              r5,r6,r4    ;Express n+10
+   13 00000018 E0050596        MUL              r5,r6,r5    ;Express n(n+10)
+   14 0000001C E1560004        CMP              r6,r4       ;Compare r6 to r4
+   15 00000020 E2866001        ADD              r6,r6,#1    ;Add 1 to r6
+   16 00000024 0A000000        BEQ              Endline     ;Move to Endline br
+                                                            anch (if r6 = r4)
+   17 00000028 EAFFFFF9        B                Loop        ;Move to Loop branc
+                                                            h
+   18 0000002C         
+   19 0000002C         Endline
+   20 0000002C E5805000        STR              r5, [r0]    ;Store the value of
+                                                             r5 in the address 
+                                                            of r0
+   21 00000030         
+   22 00000030 00040000 
+                       Address DCD              &00040000
+   23 00000034                 END                          ;Exit the program
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\3_2.d -o.\objects\3_2.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_
+v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION
+ SETA 529" --list=.\listings\3_2.lst 3_2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file 3_2.s
+   Uses
+      None
+Comment: ARMex unused
+Address 00000030
+
+Symbol: Address
+   Definitions
+      At line 22 in file 3_2.s
+   Uses
+      At line 5 in file 3_2.s
+Comment: Address used once
+Endline 0000002C
+
+Symbol: Endline
+   Definitions
+      At line 19 in file 3_2.s
+   Uses
+      At line 16 in file 3_2.s
+Comment: Endline used once
+Loop 00000014
+
+Symbol: Loop
+   Definitions
+      At line 11 in file 3_2.s
+   Uses
+      At line 17 in file 3_2.s
+Comment: Loop used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 4 in file 3_2.s
+   Uses
+      None
+Comment: Main unused
+5 symbols
+337 symbols in table

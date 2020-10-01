@@ -1,0 +1,81 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000 E59F005C        LDR              r0, Address ;Insert address val
+                                                            ue
+    5 00000004 E3A01001        MOV              r1, #1      ;r1 = 1
+    6 00000008 E1A02081        MOV              r2, r1, LSL #1 ;r2 = 2
+    7 0000000C E1A03181        MOV              r3, r1, LSL #3 ;r3 = 8
+    8 00000010 E0833001        ADD              r3, r3, r1  ;r3 = 9
+    9 00000014         
+   10 00000014 E0833002        ADD              r3, r3, r2  ;r3 = 11
+   11 00000018 E0834002        ADD              r4, r3, r2  ;r4 = 13
+   12 0000001C E0845002        ADD              r5, r4, r2  ;r5 = 15
+   13 00000020 E0856002        ADD              r6, r5, r2  ;r6 = 17
+   14 00000024 E0867002        ADD              r7, r6, r2  ;r7 = 19
+   15 00000028 E0878002        ADD              r8, r7, r2  ;r8 = 21
+   16 0000002C E0889002        ADD              r9, r8, r2  ;r9 = 23
+   17 00000030 E089A002        ADD              r10, r9, r2 ;r10 = 25
+   18 00000034 E08AB002        ADD              r11, r10, r2 ;r11 = 27
+   19 00000038 E08BC002        ADD              r12, r11, r2 ;r12 = 29
+   20 0000003C         
+   21 0000003C E0833004        ADD              r3, r3, r4  ;r3 = 11 + 13 = 24 
+                                                            = 0x18
+   22 00000040 E0854006        ADD              r4, r5, r6  ;r4 = 15 + 17 = 32 
+                                                            = 0x20
+   23 00000044 E0875008        ADD              r5, r7, r8  ;r5 = 19 + 21 = 40 
+                                                            = 0x28
+   24 00000048 E089600A        ADD              r6, r9, r10 ;r6 = 23 + 25 = 48 
+                                                            = 0x30
+   25 0000004C E08B700C        ADD              r7, r11, r12 ;r7 = 27 + 29 = 56
+                                                             = 0x38
+   26 00000050         
+   27 00000050 E0833004        ADD              r3, r3, r4  ;r3 = 24 + 32 = 56 
+                                                            = 0x38
+   28 00000054 E0854006        ADD              r4, r5, r6  ;r4 = 40 + 48 = 88 
+                                                            = 0x58
+   29 00000058 E0844007        ADD              r4, r4, r7  ;r4 = 88 + 56 = 144
+                                                             = 0x90
+   30 0000005C         
+   31 0000005C E0833004        ADD              r3, r3, r4  ;r3 = 56 + 144 = 0x
+                                                            c8
+   32 00000060         
+   33 00000060 E5803000        STR              r3, [r0]    ;store r3 in r0.
+   34 00000064         
+   35 00000064 00040000 
+                       Address DCD              &00040000
+   36 00000068                 END                          ;Exit the program
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\3_3.d -o.\objects\3_3.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_
+v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION
+ SETA 529" --list=.\listings\3_3.lst 3_3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file 3_3.s
+   Uses
+      None
+Comment: ARMex unused
+Address 00000064
+
+Symbol: Address
+   Definitions
+      At line 35 in file 3_3.s
+   Uses
+      At line 4 in file 3_3.s
+Comment: Address used once
+2 symbols
+334 symbols in table

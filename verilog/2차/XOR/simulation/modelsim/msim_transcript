@@ -1,0 +1,49 @@
+# do assign1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/Users/jjaa7/Desktop/Quartus2/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/Users/jjaa7/Desktop/Quartus2/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/XOR {C:/Users/jjaa7/Desktop/XOR/_XOR.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 03:38:32 on Sep 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/XOR" C:/Users/jjaa7/Desktop/XOR/_XOR.v 
+# -- Compiling module _XOR
+# 
+# Top level modules:
+# 	_XOR
+# End time: 03:38:32 on Sep 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/XOR {C:/Users/jjaa7/Desktop/XOR/tb_XOR.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 03:38:32 on Sep 14,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/XOR" C:/Users/jjaa7/Desktop/XOR/tb_XOR.v 
+# -- Compiling module tb_XOR
+# 
+# Top level modules:
+# 	tb_XOR
+# End time: 03:38:32 on Sep 14,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_XOR
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_XOR 
+# Start time: 03:38:33 on Sep 14,2020
+# Loading work.tb_XOR
+# Loading work._XOR
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 03:39:28 on Sep 14,2020, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 0

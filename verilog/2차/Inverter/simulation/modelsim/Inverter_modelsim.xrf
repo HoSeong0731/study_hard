@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/jjaa7/Desktop/Inverter/_INVERTER.v
+source_file = 1, C:/Users/jjaa7/Desktop/Inverter/tb_inv.v
+source_file = 1, C:/Users/jjaa7/Desktop/Inverter/db/Inverter.cbx.xml
+design_name = _inv
+instance = comp, \y~output , y~output, _inv, 1
+instance = comp, \a~input , a~input, _inv, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _inv, 1

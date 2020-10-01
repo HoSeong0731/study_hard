@@ -1,0 +1,102 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMex, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         Main
+    5 00000000 E3A00001        MOV              r0, #1      ;r0 = 1(1)
+    6 00000004 E1A01080        MOV              r1, r0, LSL #1 ;shift r0 by 1 a
+                                                            nd r1 = r0(2)
+    7 00000008 E1A02180        MOV              r2, r0, LSL #3 ;shift r0 by 3 a
+                                                            nd r2 = r0(8)
+    8 0000000C         
+    9 0000000C E59F7020        LDR              r7, Address ;Insert address val
+                                                            ue
+   10 00000010         
+   11 00000010 E0806001        ADD              r6, r0, r1  ;r6 = r0 + r1(r6 = 
+                                                            3)
+   12 00000014 E0866002        ADD              r6, r6, r2  ;r6 = r6 + r2(r6 = 
+                                                            11)
+   13 00000018 E0465000        SUB              r5, r6, r0  ;r5 = r6 - r0(r5 = 
+                                                            10)
+   14 0000001C         
+   15 0000001C         Loop
+   16 0000001C E0833006        ADD              r3, r3, r6  ;r3 = r3 + r6(r3 = 
+                                                            0 + 11[first value]
+                                                            ), 11(First) + 13(s
+                                                            econd)...
+   17 00000020 E0866001        ADD              r6, r6, r1  ;r6 = r6 + r1(r6 = 
+                                                            11 + 2[first value]
+                                                            )
+   18 00000024 E0844000        ADD              r4, r4, r0  ;r4 = r4 + 1(count 
+                                                            ++)
+   19 00000028 E1550004        CMP              r5, r4      ;compare r5, r4(if 
+                                                            count = 10)
+   20 0000002C 0A000001        BEQ              Endline     ;if r5 == r4(count 
+                                                            = 10), go to Endlin
+                                                            e
+   21 00000030 EAFFFFF9        B                Loop        ;else, go to Loop
+   22 00000034         
+   23 00000034 00040000 
+                       Address DCD              &00040000
+   24 00000038         
+   25 00000038         Endline
+   26 00000038 E5873000        STR              r3, [r7]    ;store r3 to r7(c8 
+                                                            = 200)
+   27 0000003C                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM966E-S --apcs=interw
+ork --depend=.\objects\3_1.d -o.\objects\3_1.o -IC:\Keil_v5\ARM\RV31\INC -IC:\K
+eil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VER
+SION SETA 529" --list=.\listings\3_1.lst 3_1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ARMex 00000000
+
+Symbol: ARMex
+   Definitions
+      At line 1 in file 3_1.s
+   Uses
+      None
+Comment: ARMex unused
+Address 00000034
+
+Symbol: Address
+   Definitions
+      At line 23 in file 3_1.s
+   Uses
+      At line 9 in file 3_1.s
+Comment: Address used once
+Endline 00000038
+
+Symbol: Endline
+   Definitions
+      At line 25 in file 3_1.s
+   Uses
+      At line 20 in file 3_1.s
+Comment: Endline used once
+Loop 0000001C
+
+Symbol: Loop
+   Definitions
+      At line 15 in file 3_1.s
+   Uses
+      At line 21 in file 3_1.s
+Comment: Loop used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 4 in file 3_1.s
+   Uses
+      None
+Comment: Main unused
+5 symbols
+337 symbols in table

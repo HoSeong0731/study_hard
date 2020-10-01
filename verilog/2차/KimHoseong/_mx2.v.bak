@@ -1,0 +1,10 @@
+module _mx2(d0, d1, s, y);
+	input d0, d1, s;
+	output y;
+
+_inv iv0(.a(s), .y(sbar));
+_nand2 nd20(.a(d0), .b(sbar), .y(w0));
+_nand2 nd21(.a(d1), .b(s), .y(w1));
+_nand2 nd22(w0, w1, y);
+
+endmodule
