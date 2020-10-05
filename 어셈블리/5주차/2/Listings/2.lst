@@ -1,0 +1,110 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ARMem, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         Main
+    5 00000000 E59F0074        LDR              r0, ADDRESS ;ADDRESS load
+    6 00000004         
+    7 00000004 E3A0B001        MOV              r11, #1     ;Value for multipli
+                                                            cation
+    8 00000008 E3A01001        MOV              r1, #1      ;insert value and 1
+                                                            !
+    9 0000000C         
+   10 0000000C E28BB001        ADD              r11, r11, #1 ;r11 = 1 + 1
+   11 00000010 E0020B91        MUL              r2, r1, r11 ;2!
+   12 00000014         
+   13 00000014 E28BB001        ADD              r11, r11, #1 ;r11 = 2 + 1
+   14 00000018 E0030B92        MUL              r3, r2, r11 ;3!
+   15 0000001C         
+   16 0000001C E28BB001        ADD              r11, r11, #1 ;r11 = 3 + 1
+   17 00000020 E0040B93        MUL              r4, r3, r11 ;4!
+   18 00000024         
+   19 00000024 E28BB001        ADD              r11, r11, #1 ;r11 = 4 + 1
+   20 00000028 E0050B94        MUL              r5, r4, r11 ;5!
+   21 0000002C         
+   22 0000002C E28BB001        ADD              r11, r11, #1 ;r11 = 5 + 1
+   23 00000030 E0060B95        MUL              r6, r5, r11 ;6!
+   24 00000034         
+   25 00000034 E28BB001        ADD              r11, r11, #1 ;r11 = 6 + 1
+   26 00000038 E0070B96        MUL              r7, r6, r11 ;7!
+   27 0000003C         
+   28 0000003C E28BB001        ADD              r11, r11, #1 ;r11 = 7 + 1
+   29 00000040 E0080B97        MUL              r8, r7, r11 ;8!
+   30 00000044         
+   31 00000044 E28BB001        ADD              r11, r11, #1 ;r11 = 8 + 1
+   32 00000048 E0090B98        MUL              r9, r8, r11 ;9!
+   33 0000004C         
+   34 0000004C E28BB001        ADD              r11, r11, #1 ;r11 = 9 + 1
+   35 00000050 E00A0B99        MUL              r10, r9, r11 ;10!
+   36 00000054         
+   37 00000054 E4801004        STR              r1, [r0], #4 ;store 1 in r0, r0
+                                                             = r0 + 4
+   38 00000058 E4802004        STR              r2, [r0], #4 ;store 2 in r0, r0
+                                                             = r0 + 4
+   39 0000005C E4803004        STR              r3, [r0], #4 ;store 6 in r0, r0
+                                                             = r0 + 4
+   40 00000060 E4804004        STR              r4, [r0], #4 ;store 24 in r0, r
+                                                            0 = r0 + 4
+   41 00000064 E4805004        STR              r5, [r0], #4 ;store 120 in r0, 
+                                                            r0 = r0 + 4
+   42 00000068 E4806004        STR              r6, [r0], #4 ;store 720 in r0, 
+                                                            r0 = r0 + 4
+   43 0000006C E4807004        STR              r7, [r0], #4 ;store 5040 in r0,
+                                                             r0 = r0 + 4
+   44 00000070 E4808004        STR              r8, [r0], #4 ;store 40320 in r0
+                                                            , r0 = r0 + 4
+   45 00000074 E4809004        STR              r9, [r0], #4 ;store 362880 in r
+                                                            0, r0 = r0 + 4
+   46 00000078 E580A000        STR              r10, [r0]   ;store 3628800 in r
+                                                            0
+   47 0000007C         
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   48 0000007C 00040000 
+                       ADDRESS &                &40000      ;ADDRESSto save
+   49 00000080                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\2.d -o.\objects\2.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SET
+A 529" --list=.\listings\2.lst 2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ADDRESS 0000007C
+
+Symbol: ADDRESS
+   Definitions
+      At line 48 in file 2.s
+   Uses
+      At line 5 in file 2.s
+Comment: ADDRESS used once
+ARMem 00000000
+
+Symbol: ARMem
+   Definitions
+      At line 1 in file 2.s
+   Uses
+      None
+Comment: ARMem unused
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 4 in file 2.s
+   Uses
+      None
+Comment: Main unused
+3 symbols
+335 symbols in table
