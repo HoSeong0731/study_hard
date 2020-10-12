@@ -1,0 +1,148 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Problem3, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         Main
+    4 00000000 E3A0000A        MOV              r0,#10
+    5 00000004 E3A0100B        MOV              r1,#11
+    6 00000008 E3A0200C        MOV              r2,#12
+    7 0000000C E3A0300D        MOV              r3,#13
+    8 00000010 E3A0400E        MOV              r4,#14
+    9 00000014 E3A0500F        MOV              r5,#15
+   10 00000018 E3A06010        MOV              r6,#16
+   11 0000001C E3A07011        MOV              r7,#17      ;Initialize Registe
+                                                            r r0-r7 to 10 ~ 17
+   12 00000020 E3A090A0        MOV              r9,#160     ;The value to get t
+                                                            he greatest common 
+                                                            divisor
+   13 00000024 E59FD068        LDR              sp,TEMPADDR1 
+                                                            ;Load address value
+                                                            
+   14 00000028         
+   15 00000028         doRegister
+   16 00000028 E9AD00FF        STMFA            sp!, {r0-r7} ;Empty the first a
+                                                            ddress to store the
+                                                             GCD and store the 
+                                                            previous values
+   17 0000002C         
+   18 0000002C E2800000        ADD              r0, r0, #0  ;10 + 0 = 10
+   19 00000030 E2811001        ADD              r1, r1, #1  ;11 + 1 = 12
+   20 00000034 E2822002        ADD              r2, r2, #2  ;12 + 2 = 14
+   21 00000038 E2833003        ADD              r3, r3, #3  ;13 + 3 = 16
+   22 0000003C E2844004        ADD              r4, r4, #4  ;14 + 4 = 18
+   23 00000040 E2855005        ADD              r5, r5, #5  ;15 + 5 = 20
+   24 00000044 E2866006        ADD              r6, r6, #6  ;16 + 6 = 22
+   25 00000048 E2877007        ADD              r7, r7, #7  ;17 + 7 = 24
+   26 0000004C         ;Store the value of each register plus the index value
+   27 0000004C         
+   28 0000004C E0808001        ADD              r8, r0, r1
+   29 00000050 E0888002        ADD              r8, r8, r2
+   30 00000054 E0888003        ADD              r8, r8, r3
+   31 00000058 E0888004        ADD              r8, r8, r4
+   32 0000005C E0888005        ADD              r8, r8, r5
+   33 00000060 E0888006        ADD              r8, r8, r6
+   34 00000064 E0888007        ADD              r8, r8, r7  ;Get the sum of r0-
+                                                            r7 get above
+   35 00000068         ;Result(r8) = 136
+   36 00000068 E83D00FF        LDMDA            sp!, {r0-r7} ;load r0-r7 value(
+                                                            10-17)
+   37 0000006C E9AD0300        STMFA            sp!, {r8, r9} ;store r8, r9(136
+                                                            , 160)
+   38 00000070         doGCD
+   39 00000070 E1580009        CMP              r8,r9       ;Set the flag to th
+                                                            e value of r8(136)-
+                                                            r9(160)
+   40 00000074 C0488009        SUBGT            r8,r8,r9    ;If r8 > r9, r8 = r
+                                                            8 - r9
+   41 00000078 D0499008        SUBLE            r9,r9,r8    ;If r8 <= r9, r9 = 
+                                                            r9 - r8
+   42 0000007C 0A000000        BEQ              Endline     ;If r8 == r9, Move 
+                                                            to Endline branch
+   43 00000080 1AFFFFFA        BNE              doGCD       ;If r8 != r9, Move 
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                            to doGCD branch
+   44 00000084         
+   45 00000084         Endline
+   46 00000084 E088C004        ADD              r12, r8, r4 ;r12 = GCD + 4
+   47 00000088 E83D0300        LDMDA            sp!, {r8, r9} ;load r8, r9(136,
+                                                             160)
+   48 0000008C E58DC000        STR              r12,[sp]    ;store r12
+   49 00000090         
+   50 00000090         
+   51 00000090 E3A0F000        MOV              pc,#0       ;Inserting a zero v
+                                                            alue into the progr
+                                                            am counter
+   52 00000094         
+   53 00000094 00040000 
+                       TEMPADDR1
+                               &                &00040000
+   54 00000098                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\3.d -o.\objects\3.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SET
+A 529" --list=.\listings\3.lst 3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Endline 00000084
+
+Symbol: Endline
+   Definitions
+      At line 45 in file 3.s
+   Uses
+      At line 42 in file 3.s
+Comment: Endline used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 3 in file 3.s
+   Uses
+      None
+Comment: Main unused
+Problem3 00000000
+
+Symbol: Problem3
+   Definitions
+      At line 1 in file 3.s
+   Uses
+      None
+Comment: Problem3 unused
+TEMPADDR1 00000094
+
+Symbol: TEMPADDR1
+   Definitions
+      At line 53 in file 3.s
+   Uses
+      At line 13 in file 3.s
+Comment: TEMPADDR1 used once
+doGCD 00000070
+
+Symbol: doGCD
+   Definitions
+      At line 38 in file 3.s
+   Uses
+      At line 43 in file 3.s
+Comment: doGCD used once
+doRegister 00000028
+
+Symbol: doRegister
+   Definitions
+      At line 15 in file 3.s
+   Uses
+      None
+Comment: doRegister unused
+6 symbols
+338 symbols in table

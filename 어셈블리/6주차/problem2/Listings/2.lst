@@ -1,0 +1,88 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Problem2, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         Main
+    4 00000000 E3A00002        MOV              r0,#2
+    5 00000004 E3A01007        MOV              r1,#7
+    6 00000008 E3A02001        MOV              r2,#1
+    7 0000000C E3A03003        MOV              r3,#3
+    8 00000010 E3A04008        MOV              r4,#8
+    9 00000014 E3A05004        MOV              r5,#4
+   10 00000018 E3A06005        MOV              r6,#5
+   11 0000001C E3A07006        MOV              r7,#6       ;Initialize Registe
+                                                            r r0-r7 to 2,7,1,3,
+                                                            8,4,5,6
+   12 00000020         
+   13 00000020 E59FD014        LDR              sp, TEMPADDR1 ;Load address val
+                                                            ue to stack pointer
+                                                             (sp = r13)
+   14 00000024         
+   15 00000024 E8AD0004        STMEA            sp!, {r2}   ;Store r2
+   16 00000028 E8AD0009        STMEA            sp!, {r0,r3} ;Store r0, r3 valu
+                                                            es into memory via 
+                                                            multiple stores and
+                                                             auto incrementing
+   17 0000002C E8AD00E0        STMEA            sp!, {r5-r7} ;Store r5 ro r7 va
+                                                            lues into memory vi
+                                                            a multiple stores a
+                                                            nd auto incrementin
+                                                            g
+   18 00000030 E8AD0012        STMEA            sp!, {r1,r4} ;Store r1, r4 valu
+                                                            es into memory vua 
+                                                            mulipule stores and
+                                                             auto incrementing
+   19 00000034         
+   20 00000034 E93D00FF        LDMEA            sp!, {r0-r7} ;Called the value 
+                                                            stored on the SP in
+                                                            to the r0~r7 legest
+                                                            er.
+   21 00000038         
+   22 00000038 E3A0F000        MOV              pc,#0       ;Inserting a zero v
+                                                            alue into the progr
+                                                            am counter
+   23 0000003C         
+   24 0000003C 00040000 
+                       TEMPADDR1
+                               &                &00040000   ;address 
+   25 00000040                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\2.d -o.\objects\2.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SET
+A 529" --list=.\listings\2.lst 2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 3 in file 2.s
+   Uses
+      None
+Comment: Main unused
+Problem2 00000000
+
+Symbol: Problem2
+   Definitions
+      At line 1 in file 2.s
+   Uses
+      None
+Comment: Problem2 unused
+TEMPADDR1 0000003C
+
+Symbol: TEMPADDR1
+   Definitions
+      At line 24 in file 2.s
+   Uses
+      At line 13 in file 2.s
+Comment: TEMPADDR1 used once
+3 symbols
+335 symbols in table

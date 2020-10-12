@@ -1,0 +1,77 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Problem1, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         Main
+    4 00000000 E3A0000A        MOV              r0, #10     ;r0 = #10
+    5 00000004 E59FD018        LDR              sp, TEMPADDR1 ;Load address val
+                                                            ue to stack pointer
+                                                             (sp = r13)
+    6 00000008 E3A03001        MOV              r3, #1      ;r3 = #1
+    7 0000000C         
+    8 0000000C         LOOP
+    9 0000000C E3500001        CMP              r0, #1      ;cmp r0 & #1
+   10 00000010 C0030390        MULGT            r3, r0, r3  ;if r0 > 1 r3 = r0 
+                                                            * r3
+   11 00000014 C2400001        SUBGT            r0, r0, #1  ;if r0 > 1 r0 = r0 
+                                                            - 1
+   12 00000018         
+   13 00000018 CAFFFFFB        BGT              LOOP        ;factorial recursiv
+                                                            e function
+   14 0000001C         
+   15 0000001C E58D3000        STR              r3, [sp]    ;store #3628800 = 0
+                                                            x375f00
+   16 00000020 E3A0F000        MOV              pc, #0      ;Mov pc, #0
+   17 00000024         
+   18 00000024 00040000 
+                       TEMPADDR1
+                               &                &00040000   ;address 
+   19 00000028                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\1.d -o.\objects\1.o -IC:\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\A
+RM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SET
+A 529" --list=.\listings\1.lst 1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 8 in file 1.s
+   Uses
+      At line 13 in file 1.s
+Comment: LOOP used once
+Main 00000000
+
+Symbol: Main
+   Definitions
+      At line 3 in file 1.s
+   Uses
+      None
+Comment: Main unused
+Problem1 00000000
+
+Symbol: Problem1
+   Definitions
+      At line 1 in file 1.s
+   Uses
+      None
+Comment: Problem1 unused
+TEMPADDR1 00000024
+
+Symbol: TEMPADDR1
+   Definitions
+      At line 18 in file 1.s
+   Uses
+      At line 5 in file 1.s
+Comment: TEMPADDR1 used once
+4 symbols
+336 symbols in table
