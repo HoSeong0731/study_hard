@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/jjaa7/Desktop/dlatch/gates.v
+source_file = 1, C:/Users/jjaa7/Desktop/dlatch/_srlatch.v
+source_file = 1, C:/Users/jjaa7/Desktop/dlatch/_dlatch.v
+source_file = 1, C:/Users/jjaa7/Desktop/dlatch/tb_dlatch.v
+source_file = 1, C:/Users/jjaa7/Desktop/dlatch/db/_dlatch.cbx.xml
+design_name = _dlatch
+instance = comp, \q~output , q~output, _dlatch, 1
+instance = comp, \q_bar~output , q_bar~output, _dlatch, 1
+instance = comp, \d~input , d~input, _dlatch, 1
+instance = comp, \clk~input , clk~input, _dlatch, 1
+instance = comp, \U3_srlatch|U0_nor2|y~1 , U3_srlatch|U0_nor2|y~1, _dlatch, 1
+instance = comp, \U3_srlatch|U1_nor2|y~0 , U3_srlatch|U1_nor2|y~0, _dlatch, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _dlatch, 1

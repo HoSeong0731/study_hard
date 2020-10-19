@@ -1,0 +1,97 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/simulation/modelsim
+v_dff_rs_async
+Z1 !s110 1603060726
+!i10b 1
+!s100 ^Ok[IU]g0EQS4XRg2X;hm3
+I>h6Hc;_A;dPjfLo[60OTW0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1602869349
+8C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_async.v
+FC:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_async.v
+L0 1
+Z3 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z4 !s108 1603060725.000000
+!s107 C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async|C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_async.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async
+n@_dff_rs_async
+v_dff_rs_sync
+Z7 !s110 1603060725
+!i10b 1
+!s100 ?gEUe[gBDFJ1WfWjT_aQQ0
+I4Dj?eF<?GUkMKCX=>Pc_J0
+R2
+R0
+w1602869332
+8C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync.v
+FC:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async|C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync.v|
+!i113 1
+R5
+R6
+n@_dff_rs_sync
+v_dff_rs_sync_async
+R7
+!i10b 1
+!s100 Wl2TK1fHbbeF1bEo[fl_93
+I[gkNV9mVb<eE^Oe`@oH>a3
+R2
+R0
+w1602869297
+8C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync_async.v
+FC:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync_async.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async|C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/_dff_rs_sync_async.v|
+!i113 1
+R5
+R6
+n@_dff_rs_sync_async
+vtb_dff_rs_sync_async
+R1
+!i10b 1
+!s100 ^DdRYm>@V=C[0n@LfcjDJ3
+I<mJ0KE`?7F57N><8IZ6:H0
+R2
+R0
+w1602869383
+8C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/tb_dff_rs_sync_async.v
+FC:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/tb_dff_rs_sync_async.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1603060726.000000
+!s107 C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/tb_dff_rs_sync_async.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async|C:/Users/jjaa7/Desktop/_dff_rs_sysnc_async/tb_dff_rs_sync_async.v|
+!i113 1
+R5
+R6

@@ -1,0 +1,502 @@
+Analysis & Synthesis report for cntr8
+Mon Oct 19 21:28:16 2020
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Logic Cells Representing Combinational Loops
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: ns_logic:U1_ns_logic
+ 12. Parameter Settings for User Entity Instance: os_logic:U2_os_logic
+ 13. Port Connectivity Checks: "os_logic:U2_os_logic|cla8:U1_cla8"
+ 14. Port Connectivity Checks: "os_logic:U2_os_logic|cla8:U0_cla8"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Oct 19 21:28:16 2020       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; cntr8                                       ;
+; Top-level Entity Name           ; cntr8                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 3                                           ;
+; Total pins                      ; 23                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; cntr8              ; cntr8              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+; _dff_r.v                         ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/_dff_r.v       ;         ;
+; gates.v                          ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/gates.v        ;         ;
+; fa_v2.v                          ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/fa_v2.v        ;         ;
+; clb4.v                           ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/clb4.v         ;         ;
+; cla4.v                           ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/cla4.v         ;         ;
+; cla8.v                           ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/cla8.v         ;         ;
+; cntr8.v                          ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/cntr8.v        ;         ;
+; _register3_r.v                   ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/_register3_r.v ;         ;
+; ns_logic.v                       ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/ns_logic.v     ;         ;
+; os_logic.v                       ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/cntr8/os_logic.v     ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 18                          ;
+;                                             ;                             ;
+; Combinational ALUT usage for logic          ; 26                          ;
+;     -- 7 input functions                    ; 1                           ;
+;     -- 6 input functions                    ; 8                           ;
+;     -- 5 input functions                    ; 5                           ;
+;     -- 4 input functions                    ; 2                           ;
+;     -- <=3 input functions                  ; 10                          ;
+;                                             ;                             ;
+; Dedicated logic registers                   ; 3                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 23                          ;
+;                                             ;                             ;
+; Total DSP Blocks                            ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; os_logic:U2_os_logic|Mux6~1 ;
+; Maximum fan-out                             ; 12                          ;
+; Total fan-out                               ; 158                         ;
+; Average fan-out                             ; 2.11                        ;
++---------------------------------------------+-----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
++---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Library Name ;
++---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+; |cntr8                          ; 26 (0)            ; 3 (0)        ; 0                 ; 0          ; 23   ; 0            ; |cntr8                                                                                      ; work         ;
+;    |_register3_r:U0_reg3r|      ; 0 (0)             ; 3 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|_register3_r:U0_reg3r                                                                ; work         ;
+;       |_dff_r:U0_dff_r|         ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|_register3_r:U0_reg3r|_dff_r:U0_dff_r                                                ; work         ;
+;       |_dff_r:U1_dff_r|         ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|_register3_r:U0_reg3r|_dff_r:U1_dff_r                                                ; work         ;
+;       |_dff_r:U2_dff_r|         ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|_register3_r:U0_reg3r|_dff_r:U2_dff_r                                                ; work         ;
+;    |ns_logic:U1_ns_logic|       ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|ns_logic:U1_ns_logic                                                                 ; work         ;
+;    |os_logic:U2_os_logic|       ; 19 (8)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic                                                                 ; work         ;
+;       |cla8:U0_cla8|            ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8                                                    ; work         ;
+;          |cla4:U0_cla4|         ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4                                       ; work         ;
+;             |fa_v2:U2_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U2_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U2_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U2_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
+;             |fa_v2:U3_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U3_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U3_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U3_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
+;          |cla4:U1_cla4|         ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4                                       ; work         ;
+;             |clb4:U4_clb4|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|clb4:U4_clb4                          ; work         ;
+;                |_and3:U10_and3| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|clb4:U4_clb4|_and3:U10_and3           ; work         ;
+;             |fa_v2:U0_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|fa_v2:U0_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|fa_v2:U0_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|fa_v2:U0_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
+;             |fa_v2:U1_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|fa_v2:U1_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|fa_v2:U1_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U0_cla8|cla4:U1_cla4|fa_v2:U1_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
+;       |cla8:U1_cla8|            ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8                                                    ; work         ;
+;          |cla4:U0_cla4|         ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U0_cla4                                       ; work         ;
+;             |fa_v2:U2_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U0_cla4|fa_v2:U2_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U0_cla4|fa_v2:U2_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U0_cla4|fa_v2:U2_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
+;             |fa_v2:U3_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U0_cla4|fa_v2:U3_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U0_cla4|fa_v2:U3_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U0_cla4|fa_v2:U3_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
+;          |cla4:U1_cla4|         ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4                                       ; work         ;
+;             |clb4:U4_clb4|      ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|clb4:U4_clb4                          ; work         ;
+;                |_or3:U11_or3|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|clb4:U4_clb4|_or3:U11_or3             ; work         ;
+;                |_or4:U15_or4|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|clb4:U4_clb4|_or4:U15_or4             ; work         ;
+;             |fa_v2:U0_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|fa_v2:U0_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|fa_v2:U0_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|fa_v2:U0_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
+;             |fa_v2:U1_fa|       ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|fa_v2:U1_fa                           ; work         ;
+;                |_xor2:U1_xor2|  ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|fa_v2:U1_fa|_xor2:U1_xor2             ; work         ;
+;                   |_or2:U4_or2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |cntr8|os_logic:U2_os_logic|cla8:U1_cla8|cla4:U1_cla4|fa_v2:U1_fa|_xor2:U1_xor2|_or2:U4_or2 ; work         ;
++---------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                     ;
++----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------+------------------------+
+; ns_logic:U1_ns_logic|next_state[0]                 ; ns_logic:U1_ns_logic|Mux0 ; yes                    ;
+; ns_logic:U1_ns_logic|next_state[1]                 ; ns_logic:U1_ns_logic|Mux0 ; yes                    ;
+; ns_logic:U1_ns_logic|next_state[2]                 ; ns_logic:U1_ns_logic|Mux0 ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                           ;                        ;
++----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; os_logic:U2_os_logic|Mux7~0                            ;   ;
+; os_logic:U2_os_logic|Mux6~0                            ;   ;
+; os_logic:U2_os_logic|Mux5~0                            ;   ;
+; os_logic:U2_os_logic|Mux4~0                            ;   ;
+; os_logic:U2_os_logic|Mux3~0                            ;   ;
+; os_logic:U2_os_logic|Mux2~0                            ;   ;
+; os_logic:U2_os_logic|Mux1~0                            ;   ;
+; os_logic:U2_os_logic|Mux0~0                            ;   ;
+; Number of logic cells representing combinational loops ; 8 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ns_logic:U1_ns_logic ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; IDLE_STATE     ; 000   ; Unsigned Binary                          ;
+; LOAD_STATE     ; 001   ; Unsigned Binary                          ;
+; INC_STATE      ; 010   ; Unsigned Binary                          ;
+; INC2_STATE     ; 011   ; Unsigned Binary                          ;
+; DEC_STATE      ; 100   ; Unsigned Binary                          ;
+; DEC2_STATE     ; 101   ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: os_logic:U2_os_logic ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; IDLE_STATE     ; 000   ; Unsigned Binary                          ;
+; LOAD_STATE     ; 001   ; Unsigned Binary                          ;
+; INC_STATE      ; 010   ; Unsigned Binary                          ;
+; INC2_STATE     ; 011   ; Unsigned Binary                          ;
+; DEC_STATE      ; 100   ; Unsigned Binary                          ;
+; DEC2_STATE     ; 101   ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "os_logic:U2_os_logic|cla8:U1_cla8"                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; b[7..1] ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; b[0]    ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; ci      ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; co      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "os_logic:U2_os_logic|cla8:U0_cla8"                                                                          ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; b[7..1] ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                                             ;
+; ci      ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; co      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 3                           ;
+;     CLR               ; 3                           ;
+; arriav_lcell_comb     ; 26                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 25                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 5                           ;
+;         6 data inputs ; 8                           ;
+; boundary_port         ; 23                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.65                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Mon Oct 19 21:28:07 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cntr8 -c cntr8
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file _dff_r.v
+    Info (12023): Found entity 1: _dff_r File: C:/Users/jjaa7/Desktop/cntr8/_dff_r.v Line: 1
+Info (12021): Found 22 design units, including 22 entities, in source file gates.v
+    Info (12023): Found entity 1: _inv File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 1
+    Info (12023): Found entity 2: _nand2 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 7
+    Info (12023): Found entity 3: _and2 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 13
+    Info (12023): Found entity 4: _or2 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 19
+    Info (12023): Found entity 5: _xor2 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 25
+    Info (12023): Found entity 6: _and3 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 37
+    Info (12023): Found entity 7: _and4 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 43
+    Info (12023): Found entity 8: _and5 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 49
+    Info (12023): Found entity 9: _or3 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 55
+    Info (12023): Found entity 10: _or4 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 61
+    Info (12023): Found entity 11: _or5 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 67
+    Info (12023): Found entity 12: _inv_4bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 73
+    Info (12023): Found entity 13: _and2_4bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 79
+    Info (12023): Found entity 14: _or2_4bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 85
+    Info (12023): Found entity 15: _xor2_4bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 91
+    Info (12023): Found entity 16: _xnor2_4bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 100
+    Info (12023): Found entity 17: _inv_32bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 108
+    Info (12023): Found entity 18: _and2_32bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 114
+    Info (12023): Found entity 19: _or2_32bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 120
+    Info (12023): Found entity 20: _xor2_32bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 126
+    Info (12023): Found entity 21: _xnor2_32bits File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 139
+    Info (12023): Found entity 22: _nor2 File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 152
+Info (12021): Found 1 design units, including 1 entities, in source file fa_v2.v
+    Info (12023): Found entity 1: fa_v2 File: C:/Users/jjaa7/Desktop/cntr8/fa_v2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clb4.v
+    Info (12023): Found entity 1: clb4 File: C:/Users/jjaa7/Desktop/cntr8/clb4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla4.v
+    Info (12023): Found entity 1: cla4 File: C:/Users/jjaa7/Desktop/cntr8/cla4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cla8.v
+    Info (12023): Found entity 1: cla8 File: C:/Users/jjaa7/Desktop/cntr8/cla8.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cntr8.v
+    Info (12023): Found entity 1: cntr8 File: C:/Users/jjaa7/Desktop/cntr8/cntr8.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file _register3_r.v
+    Info (12023): Found entity 1: _register3_r File: C:/Users/jjaa7/Desktop/cntr8/_register3_r.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ns_logic.v
+    Info (12023): Found entity 1: ns_logic File: C:/Users/jjaa7/Desktop/cntr8/ns_logic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file os_logic.v
+    Info (12023): Found entity 1: os_logic File: C:/Users/jjaa7/Desktop/cntr8/os_logic.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_cntr8.v
+    Info (12023): Found entity 1: tb_cntr8 File: C:/Users/jjaa7/Desktop/cntr8/tb_cntr8.v Line: 2
+Info (12127): Elaborating entity "cntr8" for the top level hierarchy
+Info (12128): Elaborating entity "_register3_r" for hierarchy "_register3_r:U0_reg3r" File: C:/Users/jjaa7/Desktop/cntr8/cntr8.v Line: 13
+Info (12128): Elaborating entity "_dff_r" for hierarchy "_register3_r:U0_reg3r|_dff_r:U0_dff_r" File: C:/Users/jjaa7/Desktop/cntr8/_register3_r.v Line: 7
+Info (12128): Elaborating entity "ns_logic" for hierarchy "ns_logic:U1_ns_logic" File: C:/Users/jjaa7/Desktop/cntr8/cntr8.v Line: 16
+Warning (10270): Verilog HDL Case Statement warning at ns_logic.v(15): incomplete case statement has no default case item File: C:/Users/jjaa7/Desktop/cntr8/ns_logic.v Line: 15
+Warning (10240): Verilog HDL Always Construct warning at ns_logic.v(13): inferring latch(es) for variable "next_state", which holds its previous value in one or more paths through the always construct File: C:/Users/jjaa7/Desktop/cntr8/ns_logic.v Line: 13
+Info (10041): Inferred latch for "next_state[0]" at ns_logic.v(13) File: C:/Users/jjaa7/Desktop/cntr8/ns_logic.v Line: 13
+Info (10041): Inferred latch for "next_state[1]" at ns_logic.v(13) File: C:/Users/jjaa7/Desktop/cntr8/ns_logic.v Line: 13
+Info (10041): Inferred latch for "next_state[2]" at ns_logic.v(13) File: C:/Users/jjaa7/Desktop/cntr8/ns_logic.v Line: 13
+Info (12128): Elaborating entity "os_logic" for hierarchy "os_logic:U2_os_logic" File: C:/Users/jjaa7/Desktop/cntr8/cntr8.v Line: 19
+Warning (10235): Verilog HDL Always Construct warning at os_logic.v(21): variable "d_in" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjaa7/Desktop/cntr8/os_logic.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at os_logic.v(22): variable "d_inc" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjaa7/Desktop/cntr8/os_logic.v Line: 22
+Warning (10235): Verilog HDL Always Construct warning at os_logic.v(23): variable "d_inc" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjaa7/Desktop/cntr8/os_logic.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at os_logic.v(24): variable "d_dec" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjaa7/Desktop/cntr8/os_logic.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at os_logic.v(25): variable "d_dec" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/jjaa7/Desktop/cntr8/os_logic.v Line: 25
+Info (12128): Elaborating entity "cla8" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8" File: C:/Users/jjaa7/Desktop/cntr8/os_logic.v Line: 30
+Info (12128): Elaborating entity "cla4" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4" File: C:/Users/jjaa7/Desktop/cntr8/cla8.v Line: 11
+Info (12128): Elaborating entity "fa_v2" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U0_fa" File: C:/Users/jjaa7/Desktop/cntr8/cla4.v Line: 7
+Info (12128): Elaborating entity "_xor2" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U0_fa|_xor2:U0_xor2" File: C:/Users/jjaa7/Desktop/cntr8/fa_v2.v Line: 5
+Info (12128): Elaborating entity "_inv" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U0_fa|_xor2:U0_xor2|_inv:U0_inv" File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 30
+Info (12128): Elaborating entity "_and2" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U0_fa|_xor2:U0_xor2|_and2:U2_and2" File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 32
+Info (12128): Elaborating entity "_or2" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|fa_v2:U0_fa|_xor2:U0_xor2|_or2:U4_or2" File: C:/Users/jjaa7/Desktop/cntr8/gates.v Line: 34
+Info (12128): Elaborating entity "clb4" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|clb4:U4_clb4" File: C:/Users/jjaa7/Desktop/cntr8/cla4.v Line: 11
+Info (12128): Elaborating entity "_and3" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|clb4:U4_clb4|_and3:U10_and3" File: C:/Users/jjaa7/Desktop/cntr8/clb4.v Line: 37
+Info (12128): Elaborating entity "_or3" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|clb4:U4_clb4|_or3:U11_or3" File: C:/Users/jjaa7/Desktop/cntr8/clb4.v Line: 38
+Info (12128): Elaborating entity "_and4" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|clb4:U4_clb4|_and4:U14_and4" File: C:/Users/jjaa7/Desktop/cntr8/clb4.v Line: 43
+Info (12128): Elaborating entity "_or4" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|clb4:U4_clb4|_or4:U15_or4" File: C:/Users/jjaa7/Desktop/cntr8/clb4.v Line: 44
+Info (12128): Elaborating entity "_and5" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|clb4:U4_clb4|_and5:U19_and5" File: C:/Users/jjaa7/Desktop/cntr8/clb4.v Line: 50
+Info (12128): Elaborating entity "_or5" for hierarchy "os_logic:U2_os_logic|cla8:U0_cla8|cla4:U0_cla4|clb4:U4_clb4|_or5:U20_or5" File: C:/Users/jjaa7/Desktop/cntr8/clb4.v Line: 51
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch ns_logic:U1_ns_logic|next_state[0] has unsafe behavior File: C:/Users/jjaa7/Desktop/cntr8/ns_logic.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal _register3_r:U0_reg3r|_dff_r:U1_dff_r|q File: C:/Users/jjaa7/Desktop/cntr8/_dff_r.v Line: 3
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 52 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 29 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 5034 megabytes
+    Info: Processing ended: Mon Oct 19 21:28:16 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
+
+

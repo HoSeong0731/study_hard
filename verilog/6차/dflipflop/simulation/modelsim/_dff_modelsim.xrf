@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/jjaa7/Desktop/dflipflop/_srlatch.v
+source_file = 1, C:/Users/jjaa7/Desktop/dflipflop/_dlatch.v
+source_file = 1, C:/Users/jjaa7/Desktop/dflipflop/gates.v
+source_file = 1, C:/Users/jjaa7/Desktop/dflipflop/_dff.v
+source_file = 1, C:/Users/jjaa7/Desktop/dflipflop/tb_dff.v
+source_file = 1, C:/Users/jjaa7/Desktop/dflipflop/db/_dff.cbx.xml
+design_name = _dff
+instance = comp, \q~output , q~output, _dff, 1
+instance = comp, \q_bar~output , q_bar~output, _dff, 1
+instance = comp, \d~input , d~input, _dff, 1
+instance = comp, \clk~input , clk~input, _dff, 1
+instance = comp, \U1_dlatch|U3_srlatch|U0_nor2|y~1 , U1_dlatch|U3_srlatch|U0_nor2|y~1, _dff, 1
+instance = comp, \U2_dlatch|U3_srlatch|U0_nor2|y~1 , U2_dlatch|U3_srlatch|U0_nor2|y~1, _dff, 1
+instance = comp, \U2_dlatch|U3_srlatch|U1_nor2|y~0 , U2_dlatch|U3_srlatch|U1_nor2|y~0, _dff, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _dff, 1

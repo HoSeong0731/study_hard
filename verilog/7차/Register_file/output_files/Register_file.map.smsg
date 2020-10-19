@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at _3_to_8_decoder.v(15): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/Register_file/_3_to_8_decoder.v Line: 15
+Warning (10273): Verilog HDL warning at _8_to_1_MUX.v(17): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/Register_file/_8_to_1_MUX.v Line: 17

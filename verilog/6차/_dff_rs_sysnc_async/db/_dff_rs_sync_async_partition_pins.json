@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "q_sync",
+					"strict" : false
+				},
+				{
+					"name" : "q_async",
+					"strict" : false
+				},
+				{
+					"name" : "set_n",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "d",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

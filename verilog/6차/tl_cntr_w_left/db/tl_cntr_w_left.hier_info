@@ -1,0 +1,198 @@
+|tl_cntr_w_left
+clk => clk.IN1
+reset_n => reset_n.IN1
+Ta => Ta.IN1
+Tal => Tal.IN1
+Tb => Tb.IN1
+Tbl => Tbl.IN1
+La[0] << o_logic:U2_o_logic.La
+La[1] << o_logic:U2_o_logic.La
+Lb[0] << o_logic:U2_o_logic.Lb
+Lb[1] << o_logic:U2_o_logic.Lb
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic
+Ta => _.IN1
+Tal => _.IN1
+Tb => _.IN1
+Tbl => _.IN1
+q[0] => q[0].IN3
+q[1] => q[1].IN5
+q[2] => q[2].IN5
+d[0] <= _or4:U12_or4.y
+d[1] <= _or3:U7_or3.y
+d[2] <= _or3:U3_or3.y
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and3:U0_and3
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and2:U1_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and3:U2_and3
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_or3:U3_or3
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and3:U4_and3
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and2:U5_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and3:U6_and3
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_or3:U7_or3
+a => y.IN0
+b => y.IN1
+c => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and4:U8_and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and4:U9_and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and4:U10_and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_and4:U11_and4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|ns_logic:U0_ns_logic|_or4:U12_or4
+a => y.IN0
+b => y.IN1
+c => y.IN1
+d => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|_register3_r:U1_register3_r
+clk => clk.IN3
+reset => reset.IN3
+q[0] <= _dff_r_async:U0_dff_r_async.q
+q[1] <= _dff_r_async:U1_dff_r_async.q
+q[2] <= _dff_r_async:U2_dff_r_async.q
+d[0] => d[0].IN1
+d[1] => d[1].IN1
+d[2] => d[2].IN1
+
+
+|tl_cntr_w_left|_register3_r:U1_register3_r|_dff_r_async:U0_dff_r_async
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|_register3_r:U1_register3_r|_dff_r_async:U1_dff_r_async
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|_register3_r:U1_register3_r|_dff_r_async:U2_dff_r_async
+clk => q~reg0.CLK
+reset => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|o_logic:U2_o_logic
+q[0] => q[0].IN2
+q[1] => q[1].IN2
+q[2] => q[2].IN2
+La[0] <= _or2:U2_or2.y
+La[1] <= _or2:U1_or2.y
+Lb[0] <= _or2:U5_or2.y
+Lb[1] <= _or2:U4_or2.y
+
+
+|tl_cntr_w_left|o_logic:U2_o_logic|_and2:U0_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|o_logic:U2_o_logic|_or2:U1_or2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|o_logic:U2_o_logic|_or2:U2_or2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|o_logic:U2_o_logic|_and2:U3_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|o_logic:U2_o_logic|_or2:U4_or2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tl_cntr_w_left|o_logic:U2_o_logic|_or2:U5_or2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

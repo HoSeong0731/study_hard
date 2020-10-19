@@ -1,0 +1,603 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jjaa7/Desktop/_dff_rs/simulation/modelsim
+v_and2
+Z1 !s110 1603058827
+!i10b 1
+!s100 JnoaKNocLo7nF9OX?nz583
+I14BX7mCY9b9_nHCNdj3<D0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1602850503
+Z4 8C:/Users/jjaa7/Desktop/_dff_rs/gates.v
+Z5 FC:/Users/jjaa7/Desktop/_dff_rs/gates.v
+L0 13
+Z6 OV;L;10.4b;61
+r1
+!s85 0
+31
+Z7 !s108 1603058827.000000
+Z8 !s107 C:/Users/jjaa7/Desktop/_dff_rs/gates.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs|C:/Users/jjaa7/Desktop/_dff_rs/gates.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/_dff_rs
+n@_and2
+v_and2_32bits
+R1
+!i10b 1
+!s100 b9^8jcQl;cdcWXDT0ED]_3
+I93cZJ`NCbKg<0Ek;iSb[_1
+R2
+R0
+R3
+R4
+R5
+L0 114
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_and2_32bits
+v_and2_4bits
+R1
+!i10b 1
+!s100 b[ooNjL47JoB8aR5B]kP[2
+Ia^>Vi?fFVmaVU4@8P<GGB1
+R2
+R0
+R3
+R4
+R5
+L0 79
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_and2_4bits
+v_and3
+R1
+!i10b 1
+!s100 ZY>gJi1De]U=TzgM1cDZ73
+IBzzHi_ILd5lm7ijjehnb41
+R2
+R0
+R3
+R4
+R5
+L0 37
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_and3
+v_and4
+R1
+!i10b 1
+!s100 PB_Ogo:4K6@`T195_53YT2
+I6=cjoD@=1D_o6JTNFBb8M3
+R2
+R0
+R3
+R4
+R5
+L0 43
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_and4
+v_and5
+R1
+!i10b 1
+!s100 9?Mc8jbL?ghLFZ1i[W7m_1
+IBE?5WEiOkg@;]6bg6UhMF2
+R2
+R0
+R3
+R4
+R5
+L0 49
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_and5
+v_dff
+R1
+!i10b 1
+!s100 <Na23H]R9J437m^aX7:Md1
+ILJPY8;8YIgoNXY>=_0JV_0
+R2
+R0
+w1602853452
+8C:/Users/jjaa7/Desktop/_dff_rs/_dff.v
+FC:/Users/jjaa7/Desktop/_dff_rs/_dff.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/jjaa7/Desktop/_dff_rs/_dff.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs|C:/Users/jjaa7/Desktop/_dff_rs/_dff.v|
+!i113 1
+R10
+R11
+n@_dff
+v_dff_rs
+R1
+!i10b 1
+!s100 PNJE]mV9VjCl:_8BeB88;0
+ISd>XO;VTCQKc2Xoa331?e2
+R2
+R0
+w1602858070
+8C:/Users/jjaa7/Desktop/_dff_rs/_dff_rs.v
+FC:/Users/jjaa7/Desktop/_dff_rs/_dff_rs.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/jjaa7/Desktop/_dff_rs/_dff_rs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs|C:/Users/jjaa7/Desktop/_dff_rs/_dff_rs.v|
+!i113 1
+R10
+R11
+n@_dff_rs
+v_dlatch
+Z12 !s110 1603058826
+!i10b 1
+!s100 R^zOjWz?9eIgQl7k8GoiO1
+I=dABi]nR[lCgBaea74BC42
+R2
+R0
+w1602850411
+8C:/Users/jjaa7/Desktop/_dff_rs/_dlatch.v
+FC:/Users/jjaa7/Desktop/_dff_rs/_dlatch.v
+L0 1
+R6
+r1
+!s85 0
+31
+Z13 !s108 1603058826.000000
+!s107 C:/Users/jjaa7/Desktop/_dff_rs/_dlatch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs|C:/Users/jjaa7/Desktop/_dff_rs/_dlatch.v|
+!i113 1
+R10
+R11
+n@_dlatch
+v_inv
+R1
+!i10b 1
+!s100 :5c68]7b94N?fa7Z[K0XE3
+I9NP[^6Q69kH7HfO4<VCOK1
+R2
+R0
+R3
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_inv
+v_inv_32bits
+R1
+!i10b 1
+!s100 YXec3Ge@zVI6S75N;hnZT0
+Io?<:cCm_9GfgX>8>?Sb@^3
+R2
+R0
+R3
+R4
+R5
+L0 108
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_inv_32bits
+v_inv_4bits
+R1
+!i10b 1
+!s100 f2z?XYFBml2JPNd217>cE3
+IcYHzeOkiSBLbaSz7oEFj>0
+R2
+R0
+R3
+R4
+R5
+L0 73
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_inv_4bits
+v_nand2
+R1
+!i10b 1
+!s100 n?R5F5HHUE:VUM7dSQ2Jz0
+I^42_h[F4Co]aDLX8aW7GJ0
+R2
+R0
+R3
+R4
+R5
+L0 7
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_nand2
+v_nor2
+R1
+!i10b 1
+!s100 NIzmnCQG;Hb8]RYVa4L340
+IU7hnE2Q8V?j2kNE>6lo<<1
+R2
+R0
+R3
+R4
+R5
+L0 152
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_nor2
+v_or2
+R1
+!i10b 1
+!s100 GKB<MF<PbABfm^elmKd3j3
+IVJe6Ce4ibEWC852JQ;93m3
+R2
+R0
+R3
+R4
+R5
+L0 19
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_or2
+v_or2_32bits
+R1
+!i10b 1
+!s100 <mUO1nUVo`5bO=]8HI8f[1
+IMaUL16?jjZb:d@mf<E=XW3
+R2
+R0
+R3
+R4
+R5
+L0 120
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_or2_32bits
+v_or2_4bits
+R1
+!i10b 1
+!s100 jAb`fMeb53]4LkQHj5aVR2
+IgG2d5bTWQB:0iGMPR9hWE1
+R2
+R0
+R3
+R4
+R5
+L0 85
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_or2_4bits
+v_or3
+R1
+!i10b 1
+!s100 YaRBcaYQoDcE1j0PUezJn1
+Ih0gV=YG67bVD^1Nzhz8D<2
+R2
+R0
+R3
+R4
+R5
+L0 55
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_or3
+v_or4
+R1
+!i10b 1
+!s100 oU:4kmYa:G2I7e=3I[R=G1
+I46Ci;;DK`NB2jQle4Ocn:3
+R2
+R0
+R3
+R4
+R5
+L0 61
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_or4
+v_or5
+R1
+!i10b 1
+!s100 HF747cHNnN@^Gh@7>hEzm3
+InPfT:YVDHD^Mhc^]e<^@>0
+R2
+R0
+R3
+R4
+R5
+L0 67
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_or5
+v_srlatch
+R12
+!i10b 1
+!s100 ETUDR^g:BK<T=4YXFQ2_P2
+IleEg<nT2FFf`RcR]SiJ<K3
+R2
+R0
+w1602850338
+8C:/Users/jjaa7/Desktop/_dff_rs/_srlatch.v
+FC:/Users/jjaa7/Desktop/_dff_rs/_srlatch.v
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/jjaa7/Desktop/_dff_rs/_srlatch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs|C:/Users/jjaa7/Desktop/_dff_rs/_srlatch.v|
+!i113 1
+R10
+R11
+n@_srlatch
+v_xnor2_32bits
+R1
+!i10b 1
+!s100 X;iWcS49W9j<PjZJk<D_z0
+IinmQK^Y6dPbD@GKBd5P]41
+R2
+R0
+R3
+R4
+R5
+L0 139
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_xnor2_32bits
+v_xnor2_4bits
+R1
+!i10b 1
+!s100 XK02Z<;1CB3MBiB9Ih?6`0
+IUMQ=X]m;ljC:m6A^kKQgn0
+R2
+R0
+R3
+R4
+R5
+L0 100
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_xnor2_4bits
+v_xor2
+R1
+!i10b 1
+!s100 z:lF5PJf7<gV_jmg`<XHf2
+I_T<3>oJULYD:5YnQk[4[o1
+R2
+R0
+R3
+R4
+R5
+L0 25
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_xor2
+v_xor2_32bits
+R1
+!i10b 1
+!s100 oUUn>@9NK63SC8@_j52e`3
+IB<gTNDc2kV9Kb1Q2NFeW92
+R2
+R0
+R3
+R4
+R5
+L0 126
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_xor2_32bits
+v_xor2_4bits
+R1
+!i10b 1
+!s100 I4G>Fc;RXeJNRI[PfRjW<2
+I?G2`UI=ljZLVPGPhbNUTg0
+R2
+R0
+R3
+R4
+R5
+L0 91
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@_xor2_4bits
+vtb_dff_rs
+R1
+!i10b 1
+!s100 IW[dGb^P6O_11Tmn?a2e@0
+IzWAMcO;b`F_WOhV8hiR2a1
+R2
+R0
+w1602856944
+8C:/Users/jjaa7/Desktop/_dff_rs/tb_dff_rs.v
+FC:/Users/jjaa7/Desktop/_dff_rs/tb_dff_rs.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/jjaa7/Desktop/_dff_rs/tb_dff_rs.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/jjaa7/Desktop/_dff_rs|C:/Users/jjaa7/Desktop/_dff_rs/tb_dff_rs.v|
+!i113 1
+R10
+R11

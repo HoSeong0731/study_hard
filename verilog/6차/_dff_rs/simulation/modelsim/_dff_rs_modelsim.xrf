@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/jjaa7/Desktop/_dff_rs/_srlatch.v
+source_file = 1, C:/Users/jjaa7/Desktop/_dff_rs/_dlatch.v
+source_file = 1, C:/Users/jjaa7/Desktop/_dff_rs/_dff.v
+source_file = 1, C:/Users/jjaa7/Desktop/_dff_rs/gates.v
+source_file = 1, C:/Users/jjaa7/Desktop/_dff_rs/_dff_rs.v
+source_file = 1, C:/Users/jjaa7/Desktop/_dff_rs/tb_dff_rs.v
+source_file = 1, C:/Users/jjaa7/Desktop/_dff_rs/db/_dff_rs.cbx.xml
+design_name = _dff_rs
+instance = comp, \q~output , q~output, _dff_rs, 1
+instance = comp, \clk~input , clk~input, _dff_rs, 1
+instance = comp, \d~input , d~input, _dff_rs, 1
+instance = comp, \reset_n~input , reset_n~input, _dff_rs, 1
+instance = comp, \set_n~input , set_n~input, _dff_rs, 1
+instance = comp, \U3_dff|U1_dlatch|U3_srlatch|U0_nor2|y~1 , U3_dff|U1_dlatch|U3_srlatch|U0_nor2|y~1, _dff_rs, 1
+instance = comp, \U3_dff|U2_dlatch|U3_srlatch|U0_nor2|y~1 , U3_dff|U2_dlatch|U3_srlatch|U0_nor2|y~1, _dff_rs, 1
+instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, _dff_rs, 1

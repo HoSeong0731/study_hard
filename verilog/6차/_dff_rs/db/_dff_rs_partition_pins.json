@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "q",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "set_n",
+					"strict" : false
+				},
+				{
+					"name" : "d",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

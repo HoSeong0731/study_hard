@@ -1,0 +1,147 @@
+# do tl_cntr_w_left_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim ALTERA vmap 10.4b Lib Mapping Utility 2015.05 May 27 2015
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/Users/jjaa7/Desktop/Quartus2/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/Users/jjaa7/Desktop/Quartus2/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left {C:/Users/jjaa7/Desktop/tl_cntr_w_left/gates.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:10:57 on Oct 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left" C:/Users/jjaa7/Desktop/tl_cntr_w_left/gates.v 
+# -- Compiling module _inv
+# -- Compiling module _nand2
+# -- Compiling module _and2
+# -- Compiling module _or2
+# -- Compiling module _xor2
+# -- Compiling module _and3
+# -- Compiling module _and4
+# -- Compiling module _and5
+# -- Compiling module _or3
+# -- Compiling module _or4
+# -- Compiling module _or5
+# -- Compiling module _inv_4bits
+# -- Compiling module _and2_4bits
+# -- Compiling module _or2_4bits
+# -- Compiling module _xor2_4bits
+# -- Compiling module _xnor2_4bits
+# -- Compiling module _inv_32bits
+# -- Compiling module _and2_32bits
+# -- Compiling module _or2_32bits
+# -- Compiling module _xor2_32bits
+# -- Compiling module _xnor2_32bits
+# -- Compiling module _nor2
+# 
+# Top level modules:
+# 	_nand2
+# 	_and3
+# 	_and4
+# 	_and5
+# 	_or3
+# 	_or4
+# 	_or5
+# 	_and2_4bits
+# 	_or2_4bits
+# 	_inv_32bits
+# 	_and2_32bits
+# 	_or2_32bits
+# 	_xor2_32bits
+# 	_xnor2_32bits
+# 	_nor2
+# End time: 15:10:57 on Oct 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left {C:/Users/jjaa7/Desktop/tl_cntr_w_left/tl_cntr_w_left.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:10:57 on Oct 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left" C:/Users/jjaa7/Desktop/tl_cntr_w_left/tl_cntr_w_left.v 
+# -- Compiling module tl_cntr_w_left
+# 
+# Top level modules:
+# 	tl_cntr_w_left
+# End time: 15:10:57 on Oct 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left {C:/Users/jjaa7/Desktop/tl_cntr_w_left/ns_logic.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:10:57 on Oct 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left" C:/Users/jjaa7/Desktop/tl_cntr_w_left/ns_logic.v 
+# -- Compiling module ns_logic
+# 
+# Top level modules:
+# 	ns_logic
+# End time: 15:10:57 on Oct 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left {C:/Users/jjaa7/Desktop/tl_cntr_w_left/o_logic.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:10:58 on Oct 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left" C:/Users/jjaa7/Desktop/tl_cntr_w_left/o_logic.v 
+# -- Compiling module o_logic
+# 
+# Top level modules:
+# 	o_logic
+# End time: 15:10:58 on Oct 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left {C:/Users/jjaa7/Desktop/tl_cntr_w_left/_register3_r.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:10:58 on Oct 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left" C:/Users/jjaa7/Desktop/tl_cntr_w_left/_register3_r.v 
+# -- Compiling module _register3_r
+# 
+# Top level modules:
+# 	_register3_r
+# End time: 15:10:58 on Oct 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left {C:/Users/jjaa7/Desktop/tl_cntr_w_left/_dff_r_async.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:10:58 on Oct 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left" C:/Users/jjaa7/Desktop/tl_cntr_w_left/_dff_r_async.v 
+# -- Compiling module _dff_r_async
+# 
+# Top level modules:
+# 	_dff_r_async
+# End time: 15:10:58 on Oct 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left {C:/Users/jjaa7/Desktop/tl_cntr_w_left/tb_tl_cntr_w_left.v}
+# Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
+# Start time: 15:10:58 on Oct 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/jjaa7/Desktop/tl_cntr_w_left" C:/Users/jjaa7/Desktop/tl_cntr_w_left/tb_tl_cntr_w_left.v 
+# -- Compiling module tb_tl_cntr_w_left
+# 
+# Top level modules:
+# 	tb_tl_cntr_w_left
+# End time: 15:10:58 on Oct 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_tl_cntr_w_left
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_tl_cntr_w_left 
+# Start time: 15:10:59 on Oct 19,2020
+# Loading work.tb_tl_cntr_w_left
+# Loading work.tl_cntr_w_left
+# Loading work.ns_logic
+# Loading work._and3
+# Loading work._and2
+# Loading work._or3
+# Loading work._and4
+# Loading work._or4
+# Loading work._register3_r
+# Loading work._dff_r_async
+# Loading work.o_logic
+# Loading work._or2
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: $stop    : C:/Users/jjaa7/Desktop/tl_cntr_w_left/tb_tl_cntr_w_left.v(36)
+#    Time: 320 ns  Iteration: 0  Instance: /tb_tl_cntr_w_left
+# Break in Module tb_tl_cntr_w_left at C:/Users/jjaa7/Desktop/tl_cntr_w_left/tb_tl_cntr_w_left.v line 36
+# End time: 18:44:01 on Oct 19,2020, Elapsed time: 3:33:02
+# Errors: 0, Warnings: 0

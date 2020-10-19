@@ -1,0 +1,135 @@
+|_dff_en
+clk => clk.IN1
+en => en.IN1
+d => d.IN1
+q << q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|mx2:U0_mx2
+d0 => d0.IN1
+d1 => d1.IN1
+s => s.IN2
+y <= _nand2:U3_nand2.y
+
+
+|_dff_en|mx2:U0_mx2|_inv:U0_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|mx2:U0_mx2|_nand2:U1_nand2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|mx2:U0_mx2|_nand2:U2_nand2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|mx2:U0_mx2|_nand2:U3_nand2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff
+clk => clk.IN2
+d => d.IN1
+q <= _dlatch:U2_dlatch.q
+q_bar <= _dlatch:U2_dlatch.q_bar
+
+
+|_dff_en|_dff:U1_dff|_inv:U0_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U1_dlatch
+clk => clk.IN2
+d => d.IN2
+q <= _srlatch:U3_srlatch.q
+q_bar <= _srlatch:U3_srlatch.q_bar
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U1_dlatch|_inv:U0_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U1_dlatch|_and2:U1_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U1_dlatch|_and2:U2_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U1_dlatch|_srlatch:U3_srlatch
+r => r.IN1
+s => s.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U1_dlatch|_srlatch:U3_srlatch|_nor2:U0_nor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U1_dlatch|_srlatch:U3_srlatch|_nor2:U1_nor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U2_dlatch
+clk => clk.IN2
+d => d.IN2
+q <= _srlatch:U3_srlatch.q
+q_bar <= _srlatch:U3_srlatch.q_bar
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U2_dlatch|_inv:U0_inv
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U2_dlatch|_and2:U1_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U2_dlatch|_and2:U2_and2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U2_dlatch|_srlatch:U3_srlatch
+r => r.IN1
+s => s.IN1
+q <= q.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q_bar.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U2_dlatch|_srlatch:U3_srlatch|_nor2:U0_nor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_en|_dff:U1_dff|_dlatch:U2_dlatch|_srlatch:U3_srlatch|_nor2:U1_nor2
+a => y.IN0
+b => y.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

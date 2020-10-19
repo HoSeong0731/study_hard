@@ -1,0 +1,26 @@
+|_dff_rs_sync_async
+clk => clk.IN2
+set_n => set_n.IN2
+reset_n => reset_n.IN2
+d => d.IN2
+q_sync << _dff_rs_sync:U0_dff_rs_sync.q
+q_async << _dff_rs_async:U1_dff_rs_async.q
+
+
+|_dff_rs_sync_async|_dff_rs_sync:U0_dff_rs_sync
+clk => q~reg0.CLK
+set_n => q.OUTPUTSELECT
+reset_n => q.OUTPUTSELECT
+d => q.DATAB
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|_dff_rs_sync_async|_dff_rs_async:U1_dff_rs_async
+clk => q~reg0.CLK
+set_n => q.IN0
+reset_n => q.IN1
+reset_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
