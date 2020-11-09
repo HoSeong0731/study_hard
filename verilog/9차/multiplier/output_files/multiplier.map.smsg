@@ -1,0 +1,7 @@
+Warning (10268): Verilog HDL information at MUL_NS.v(24): always construct contains both blocking and non-blocking assignments File: C:/Users/jjaa7/Desktop/multiplier/MUL_NS.v Line: 24
+Warning (10273): Verilog HDL warning at MUL_NS.v(91): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/multiplier/MUL_NS.v Line: 91
+Warning (10273): Verilog HDL warning at MUL_NS.v(92): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/multiplier/MUL_NS.v Line: 92
+Warning (10268): Verilog HDL information at MUL_NS.v(38): always construct contains both blocking and non-blocking assignments File: C:/Users/jjaa7/Desktop/multiplier/MUL_NS.v Line: 38
+Warning (10268): Verilog HDL information at MUL_OUT.v(34): always construct contains both blocking and non-blocking assignments File: C:/Users/jjaa7/Desktop/multiplier/MUL_OUT.v Line: 34
+Info (10281): Verilog HDL Declaration information at MUL_OUT.v(9): object "add" differs only in case from object "ADD" in the same scope File: C:/Users/jjaa7/Desktop/multiplier/MUL_OUT.v Line: 9
+Info (10281): Verilog HDL Declaration information at MUL_OUT.v(9): object "sub" differs only in case from object "SUB" in the same scope File: C:/Users/jjaa7/Desktop/multiplier/MUL_OUT.v Line: 9

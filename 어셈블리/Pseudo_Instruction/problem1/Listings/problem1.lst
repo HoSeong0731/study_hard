@@ -1,0 +1,200 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000 0000000D 
+                       CR      EQU              0x0d        ; it means CR = 0x0
+                                                            d
+    2 00000000         
+    3 00000000                 area             strcpy, code, readonly
+    4 00000000                 entry
+    5 00000000         
+    6 00000000         main
+    7 00000000 E59F0030        LDR              r0, =Table  ;load the address o
+                                                            f table
+    8 00000004 E59F1030        LDR              r1, =Table2 ;load the address o
+                                                            f table2
+    9 00000008 E59F5024        LDR              r5, TEMPADDR1 ;load r5 to TEMPA
+                                                            DDR1
+   10 0000000C E0222002        EOR              r2, r2, r2  ;clear R2 to store 
+                                                            count, mov r1, #0
+   11 00000010         
+   12 00000010         Loop
+   13 00000010 E4D03001        LDRB             r3, [r0], #1 ;load the first by
+                                                            te into r2
+   14 00000014 E4C13001        STRB             r3, [r1], #1 ;save each byte in
+                                                            to Table2
+   15 00000018 E4C53001        STRB             r3, [r5], #1 ;save each byte in
+                                                            to TEMPADDR1
+   16 0000001C E353000D        CMP              r3, #CR     ;is it the terminat
+                                                            or?
+   17 00000020 0A000001        BEQ              Done        ;yes => stop loop
+   18 00000024 E2822001        ADD              r2, r2, #1  ;no => incrament co
+                                                            unt-
+   19 00000028         
+   20 00000028 EAFFFFF8        BAL              Loop        ;read next char
+   21 0000002C         
+   22 0000002C         Done
+   23 0000002C E50F2008        STR              r2, CharCount ;store result
+   24 00000030 E3A0F000        mov              pc, #0      ;finish
+   25 00000034 00040000 
+                       TEMPADDR1
+                               DCD              &00040000   ;TEMPADDR1's addres
+                                                            s
+   26 00000038         
+   27 00000038         ;=========Data area
+   28 00000038 00000000 
+              00000000         AREA             Data, DATA
+   29 00000000         
+   30 00000000         Table
+   31 00000000                 ALIGN
+   32 00000000 48 65 6C 
+              6C 6F 2C 
+              20 57 6F 
+              72 6C 64 
+              0D               DCB              "Hello, World", CR 
+                                                            ;sentence to copy
+   33 0000000D         
+   34 0000000D         Table2
+   35 0000000D 00 00 00        ALIGN
+   36 00000010 00              DCB              0           ;empty to save each
+                                                             word
+   37 00000011         
+   38 00000011         
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   39 00000011         ;=========Result area
+   40 00000011                 AREA             Result, DATA
+   41 00000000         CharCount                            ;store the length o
+                                                            f sentence
+   42 00000000 00              DCB              0           ;stroage for count
+   43 00000001         
+   44 00000001                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=ARM9E --apcs=interwork 
+--depend=.\objects\problem1.d -o.\objects\problem1.o -IC:\Keil_v5\ARM\RV31\INC 
+-IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISI
+ON_VERSION SETA 529" --list=.\listings\problem1.lst problem1.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Done 0000002C
+
+Symbol: Done
+   Definitions
+      At line 22 in file problem1.s
+   Uses
+      At line 17 in file problem1.s
+Comment: Done used once
+Loop 00000010
+
+Symbol: Loop
+   Definitions
+      At line 12 in file problem1.s
+   Uses
+      At line 20 in file problem1.s
+Comment: Loop used once
+TEMPADDR1 00000034
+
+Symbol: TEMPADDR1
+   Definitions
+      At line 25 in file problem1.s
+   Uses
+      At line 9 in file problem1.s
+Comment: TEMPADDR1 used once
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 6 in file problem1.s
+   Uses
+      None
+Comment: main unused
+strcpy 00000000
+
+Symbol: strcpy
+   Definitions
+      At line 3 in file problem1.s
+   Uses
+      None
+Comment: strcpy unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Data 00000000
+
+Symbol: Data
+   Definitions
+      At line 28 in file problem1.s
+   Uses
+      None
+Comment: Data unused
+Table 00000000
+
+Symbol: Table
+   Definitions
+      At line 30 in file problem1.s
+   Uses
+      At line 7 in file problem1.s
+Comment: Table used once
+Table2 0000000D
+
+Symbol: Table2
+   Definitions
+      At line 34 in file problem1.s
+   Uses
+      At line 8 in file problem1.s
+Comment: Table2 used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+CharCount 00000000
+
+Symbol: CharCount
+   Definitions
+      At line 41 in file problem1.s
+   Uses
+      At line 23 in file problem1.s
+Comment: CharCount used once
+Result 00000000
+
+Symbol: Result
+   Definitions
+      At line 40 in file problem1.s
+   Uses
+      None
+Comment: Result unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+CR 0000000D
+
+Symbol: CR
+   Definitions
+      At line 1 in file problem1.s
+   Uses
+      At line 16 in file problem1.s
+      At line 32 in file problem1.s
+
+1 symbol
+345 symbols in table

@@ -1,0 +1,3 @@
+Dependencies for Project 'problem1', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (.\problem1.s)(0x5FA889DC)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 529"--list .\listings\problem1.lst --xref -o .\objects\problem1.o --depend .\objects\problem1.d)
