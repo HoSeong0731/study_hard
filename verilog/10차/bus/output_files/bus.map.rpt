@@ -1,0 +1,382 @@
+Analysis & Synthesis report for bus
+Mon Nov 16 19:30:10 2020
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "mux3_32bits:U6_mx3_S_dout"
+ 12. Port Connectivity Checks: "_dff2_r:U5_dff2_r"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Nov 16 19:30:10 2020       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; bus                                         ;
+; Top-level Entity Name           ; bus                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 4                                           ;
+; Total pins                      ; 227                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; bus                ; bus                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; bus.v                            ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/bus/bus.v       ;         ;
+; bus_arbit.v                      ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/bus/bus_arbit.v ;         ;
+; bus_addr.v                       ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/bus/bus_addr.v  ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 40                          ;
+;                                             ;                             ;
+; Combinational ALUT usage for logic          ; 79                          ;
+;     -- 7 input functions                    ; 0                           ;
+;     -- 6 input functions                    ; 0                           ;
+;     -- 5 input functions                    ; 0                           ;
+;     -- 4 input functions                    ; 34                          ;
+;     -- <=3 input functions                  ; 45                          ;
+;                                             ;                             ;
+; Dedicated logic registers                   ; 4                           ;
+;                                             ;                             ;
+; I/O pins                                    ; 227                         ;
+;                                             ;                             ;
+; Total DSP Blocks                            ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; arbiter:U0_arbiter|M1_grant ;
+; Maximum fan-out                             ; 42                          ;
+; Total fan-out                               ; 583                         ;
+; Average fan-out                             ; 1.09                        ;
++---------------------------------------------+-----------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
++-----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
+; Compilation Hierarchy Node              ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
++-----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
+; |bus                                    ; 79 (0)            ; 4 (0)        ; 0                 ; 0          ; 227  ; 0            ; |bus                                    ; work         ;
+;    |_dff2_r:U5_dff2_r|                  ; 0 (0)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |bus|_dff2_r:U5_dff2_r                  ; work         ;
+;    |address_decoder:U4_address_decoder| ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |bus|address_decoder:U4_address_decoder ; work         ;
+;    |arbiter:U0_arbiter|                 ; 4 (4)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |bus|arbiter:U0_arbiter                 ; work         ;
+;    |mux2:U1_mx2_wr|                     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |bus|mux2:U1_mx2_wr                     ; work         ;
+;    |mux2_32bits:U3_mx2_U_dout|          ; 32 (32)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |bus|mux2_32bits:U3_mx2_U_dout          ; work         ;
+;    |mux2_8bits:U2_mx2_addr|             ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |bus|mux2_8bits:U2_mx2_addr             ; work         ;
+;    |mux3_32bits:U6_mx3_S_dout|          ; 32 (32)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |bus|mux3_32bits:U6_mx3_S_dout          ; work         ;
++-----------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++----------------------------------------------------+----------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal              ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------------------+------------------------+
+; arbiter:U0_arbiter|next_M0_grant                   ; arbiter:U0_arbiter|next_M1_grant ; yes                    ;
+; arbiter:U0_arbiter|next_M1_grant                   ; arbiter:U0_arbiter|next_M1_grant ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                                  ;                        ;
++----------------------------------------------------+----------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |bus|mux3_32bits:U6_mx3_S_dout|y[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux3_32bits:U6_mx3_S_dout"                                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; d2   ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
+; s    ; Input ; Warning  ; Input port expression (3 bits) is wider than the input port (2 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "_dff2_r:U5_dff2_r"                                                                                                                                                    ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (2 bits) is smaller than the port expression (3 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 4                           ;
+;     CLR               ; 2                           ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 79                          ;
+;     normal            ; 79                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 43                          ;
+;         4 data inputs ; 34                          ;
+; boundary_port         ; 227                         ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.07                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Mon Nov 16 19:30:02 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bus -c bus
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file bus.v
+    Info (12023): Found entity 1: bus File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bus_arbit.v
+    Info (12023): Found entity 1: arbiter File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 3
+Warning (12019): Can't analyze file -- file bus_adder.v is missing
+Info (12021): Found 6 design units, including 6 entities, in source file bus_addr.v
+    Info (12023): Found entity 1: address_decoder File: C:/Users/jjaa7/Desktop/bus/bus_addr.v Line: 1
+    Info (12023): Found entity 2: mux3_32bits File: C:/Users/jjaa7/Desktop/bus/bus_addr.v Line: 16
+    Info (12023): Found entity 3: mux2_32bits File: C:/Users/jjaa7/Desktop/bus/bus_addr.v Line: 23
+    Info (12023): Found entity 4: mux2_8bits File: C:/Users/jjaa7/Desktop/bus/bus_addr.v Line: 30
+    Info (12023): Found entity 5: mux2 File: C:/Users/jjaa7/Desktop/bus/bus_addr.v Line: 37
+    Info (12023): Found entity 6: _dff2_r File: C:/Users/jjaa7/Desktop/bus/bus_addr.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file tb_bus.v
+    Info (12023): Found entity 1: tb_bus File: C:/Users/jjaa7/Desktop/bus/tb_bus.v Line: 3
+Info (12127): Elaborating entity "bus" for the top level hierarchy
+Info (12128): Elaborating entity "arbiter" for hierarchy "arbiter:U0_arbiter" File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 25
+Warning (10270): Verilog HDL Case Statement warning at bus_arbit.v(28): incomplete case statement has no default case item File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 28
+Info (10264): Verilog HDL Case Statement information at bus_arbit.v(28): all case item expressions in this case statement are onehot File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at bus_arbit.v(18): inferring latch(es) for variable "next_M0_grant", which holds its previous value in one or more paths through the always construct File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 18
+Warning (10240): Verilog HDL Always Construct warning at bus_arbit.v(18): inferring latch(es) for variable "next_M1_grant", which holds its previous value in one or more paths through the always construct File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 18
+Info (10041): Inferred latch for "next_M1_grant" at bus_arbit.v(26) File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 26
+Info (10041): Inferred latch for "next_M0_grant" at bus_arbit.v(26) File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 26
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:U1_mx2_wr" File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 28
+Info (12128): Elaborating entity "mux2_8bits" for hierarchy "mux2_8bits:U2_mx2_addr" File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 31
+Info (12128): Elaborating entity "mux2_32bits" for hierarchy "mux2_32bits:U3_mx2_U_dout" File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 34
+Info (12128): Elaborating entity "address_decoder" for hierarchy "address_decoder:U4_address_decoder" File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 37
+Warning (10230): Verilog HDL assignment warning at bus_addr.v(12): truncated value with size 3 to match size of target (2) File: C:/Users/jjaa7/Desktop/bus/bus_addr.v Line: 12
+Info (12128): Elaborating entity "_dff2_r" for hierarchy "_dff2_r:U5_dff2_r" File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 40
+Info (12128): Elaborating entity "mux3_32bits" for hierarchy "mux3_32bits:U6_mx3_S_dout" File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 43
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dff_to_mux3[2]" is missing source, defaulting to GND File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 22
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dff_to_mux3[2]" is missing source, defaulting to GND File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 22
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dff_to_mux3[2]" is missing source, defaulting to GND File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 22
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dff_to_mux3[2]" is missing source, defaulting to GND File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 22
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dff_to_mux3[2]" is missing source, defaulting to GND File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 22
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "dff_to_mux3[2]" is missing source, defaulting to GND File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 22
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch arbiter:U0_arbiter|next_M0_grant has unsafe behavior File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal M0_req File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 3
+Warning (13012): Latch arbiter:U0_arbiter|next_M1_grant has unsafe behavior File: C:/Users/jjaa7/Desktop/bus/bus_arbit.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal M0_req File: C:/Users/jjaa7/Desktop/bus/bus.v Line: 3
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 310 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 150 input pins
+    Info (21059): Implemented 77 output pins
+    Info (21061): Implemented 83 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 5035 megabytes
+    Info: Processing ended: Mon Nov 16 19:30:10 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
+
+
