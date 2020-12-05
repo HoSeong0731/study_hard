@@ -1,0 +1,7 @@
+6
+Denny's Bread / 0 6 13 0 0 1
+Chodenny's Car shop / 0 0 5 6 0 5
+Granddey's Go Kicking / 2 0 0 7 4 7
+Labuajiea's Yoga class / 0 6 0 0 3 5
+Grandy's Kicking Class / 0 0 5 2 0 9
+Jeawon's Computer Academy / 5 6 8 4 5 0
