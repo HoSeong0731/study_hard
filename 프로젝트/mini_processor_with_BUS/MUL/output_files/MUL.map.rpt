@@ -1,0 +1,552 @@
+Analysis & Synthesis report for MUL
+Mon Dec 07 14:51:12 2020
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: MUL_NS:U0
+ 13. Parameter Settings for User Entity Instance: MUL_OUT:U1
+ 14. Port Connectivity Checks: "MUL_OUT:U1|cla32:SUB"
+ 15. Port Connectivity Checks: "MUL_OUT:U1|cla32:ADD"
+ 16. Port Connectivity Checks: "MUL_NS:U0|cla8:UP"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Dec 07 14:51:12 2020       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; MUL                                         ;
+; Top-level Entity Name           ; MUL                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 77                                          ;
+; Total pins                      ; 133                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; MUL                ; MUL                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path           ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+; MUL.v                            ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/MUL/MUL.v       ;         ;
+; gates+etc.v                      ; yes             ; User Verilog HDL File  ; C:/Users/jjaa7/Desktop/MUL/gates+etc.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 77        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 100       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 23        ;
+;     -- 5 input functions                    ; 41        ;
+;     -- 4 input functions                    ; 13        ;
+;     -- <=3 input functions                  ; 23        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 77        ;
+;                                             ;           ;
+; I/O pins                                    ; 133       ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 77        ;
+; Total fan-out                               ; 996       ;
+; Average fan-out                             ; 2.25      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++-----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node        ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Library Name ;
++-----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+--------------+
+; |MUL                              ; 100 (0)           ; 77 (0)       ; 0                 ; 0          ; 133  ; 0            ; |MUL                                                                         ; work         ;
+;    |MUL_NS:U0|                    ; 19 (14)           ; 14 (14)      ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0                                                               ; work         ;
+;       |cla8:UP|                   ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP                                                       ; work         ;
+;          |cla4:U0|                ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0                                               ; work         ;
+;             |fa_v2:U1_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U1_fa_v2                                ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U1_fa_v2|_xor2:U1_xor2                  ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U1_fa_v2|_xor2:U1_xor2|_or2:U4_or2      ; work         ;
+;             |fa_v2:U2_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U2_fa_v2                                ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U2_fa_v2|_xor2:U1_xor2                  ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U2_fa_v2|_xor2:U1_xor2|_or2:U4_or2      ; work         ;
+;             |fa_v2:U3_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U3_fa_v2                                ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U3_fa_v2|_xor2:U1_xor2                  ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U3_fa_v2|_xor2:U1_xor2|_or2:U4_or2      ; work         ;
+;          |cla4:U1|                ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U1                                               ; work         ;
+;             |fa_v2:U0_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U1|fa_v2:U0_fa_v2                                ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U1|fa_v2:U0_fa_v2|_xor2:U1_xor2                  ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U1|fa_v2:U0_fa_v2|_xor2:U1_xor2|_or2:U4_or2      ; work         ;
+;             |fa_v2:U1_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U1|fa_v2:U1_fa_v2                                ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U1|fa_v2:U1_fa_v2|_xor2:U1_xor2                  ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_NS:U0|cla8:UP|cla4:U1|fa_v2:U1_fa_v2|_xor2:U1_xor2|_or2:U4_or2      ; work         ;
+;    |MUL_OUT:U1|                   ; 81 (46)           ; 63 (63)      ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1                                                              ; work         ;
+;       |cla32:ADD|                 ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:ADD                                                    ; work         ;
+;          |cla4:U5|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:ADD|cla4:U5                                            ; work         ;
+;             |fa_v2:U1_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:ADD|cla4:U5|fa_v2:U1_fa_v2                             ; work         ;
+;                |_xor2:U0_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:ADD|cla4:U5|fa_v2:U1_fa_v2|_xor2:U0_xor2               ; work         ;
+;                   |_and2:U3_and2| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:ADD|cla4:U5|fa_v2:U1_fa_v2|_xor2:U0_xor2|_and2:U3_and2 ; work         ;
+;       |cla32:SUB|                 ; 34 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB                                                    ; work         ;
+;          |cla4:U0|                ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U0                                            ; work         ;
+;             |clb4:U4_clb4|        ; 3 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U0|clb4:U4_clb4                               ; work         ;
+;                |_or5:U21_or5|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U0|clb4:U4_clb4|_or5:U21_or5                  ; work         ;
+;          |cla4:U1|                ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U1                                            ; work         ;
+;             |clb4:U4_clb4|        ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U1|clb4:U4_clb4                               ; work         ;
+;                |_or2:U5_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U1|clb4:U4_clb4|_or2:U5_or2                   ; work         ;
+;                |_or5:U21_or5|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U1|clb4:U4_clb4|_or5:U21_or5                  ; work         ;
+;             |fa_v2:U0_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U1|fa_v2:U0_fa_v2                             ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U1|fa_v2:U0_fa_v2|_xor2:U1_xor2               ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U1|fa_v2:U0_fa_v2|_xor2:U1_xor2|_or2:U4_or2   ; work         ;
+;          |cla4:U2|                ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U2                                            ; work         ;
+;             |clb4:U4_clb4|        ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U2|clb4:U4_clb4                               ; work         ;
+;                |_or2:U5_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U2|clb4:U4_clb4|_or2:U5_or2                   ; work         ;
+;                |_or5:U21_or5|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U2|clb4:U4_clb4|_or5:U21_or5                  ; work         ;
+;             |fa_v2:U0_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U2|fa_v2:U0_fa_v2                             ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U2|fa_v2:U0_fa_v2|_xor2:U1_xor2               ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U2|fa_v2:U0_fa_v2|_xor2:U1_xor2|_or2:U4_or2   ; work         ;
+;          |cla4:U3|                ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3                                            ; work         ;
+;             |clb4:U4_clb4|        ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3|clb4:U4_clb4                               ; work         ;
+;                |_and2:U1_and2|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3|clb4:U4_clb4|_and2:U1_and2                 ; work         ;
+;                |_or2:U5_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3|clb4:U4_clb4|_or2:U5_or2                   ; work         ;
+;                |_or5:U21_or5|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3|clb4:U4_clb4|_or5:U21_or5                  ; work         ;
+;             |fa_v2:U0_fa_v2|      ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3|fa_v2:U0_fa_v2                             ; work         ;
+;                |_xor2:U1_xor2|    ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3|fa_v2:U0_fa_v2|_xor2:U1_xor2               ; work         ;
+;                   |_or2:U4_or2|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U3|fa_v2:U0_fa_v2|_xor2:U1_xor2|_or2:U4_or2   ; work         ;
+;          |cla4:U4|                ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U4                                            ; work         ;
+;             |clb4:U4_clb4|        ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U4|clb4:U4_clb4                               ; work         ;
+;                |_and2:U1_and2|    ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U4|clb4:U4_clb4|_and2:U1_and2                 ; work         ;
+;                |_or2:U5_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U4|clb4:U4_clb4|_or2:U5_or2                   ; work         ;
+;                |_or5:U21_or5|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U4|clb4:U4_clb4|_or5:U21_or5                  ; work         ;
+;          |cla4:U5|                ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U5                                            ; work         ;
+;             |clb4:U4_clb4|        ; 4 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U5|clb4:U4_clb4                               ; work         ;
+;                |_or2:U5_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U5|clb4:U4_clb4|_or2:U5_or2                   ; work         ;
+;                |_or5:U21_or5|     ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U5|clb4:U4_clb4|_or5:U21_or5                  ; work         ;
+;          |cla4:U6|                ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U6                                            ; work         ;
+;             |clb4:U4_clb4|        ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U6|clb4:U4_clb4                               ; work         ;
+;                |_or2:U5_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U6|clb4:U4_clb4|_or2:U5_or2                   ; work         ;
+;                |_or2:U6_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U6|clb4:U4_clb4|_or2:U6_or2                   ; work         ;
+;                |_or3:U12_or3|     ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U6|clb4:U4_clb4|_or3:U12_or3                  ; work         ;
+;                |_or5:U21_or5|     ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U6|clb4:U4_clb4|_or5:U21_or5                  ; work         ;
+;          |cla4:U7|                ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U7                                            ; work         ;
+;             |clb4:U4_clb4|        ; 1 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U7|clb4:U4_clb4                               ; work         ;
+;                |_or2:U9_or2|      ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |MUL|MUL_OUT:U1|cla32:SUB|cla4:U7|clb4:U4_clb4|_or2:U9_or2                   ; work         ;
++-----------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; MUL_OUT:U1|always2~1                                   ;    ;
+; MUL_OUT:U1|Mux31~0                                     ;    ;
+; MUL_OUT:U1|Mux30~0                                     ;    ;
+; MUL_OUT:U1|Mux29~0                                     ;    ;
+; MUL_OUT:U1|Mux28~0                                     ;    ;
+; MUL_OUT:U1|Mux27~0                                     ;    ;
+; MUL_OUT:U1|Mux26~0                                     ;    ;
+; MUL_OUT:U1|Mux25~0                                     ;    ;
+; MUL_OUT:U1|Mux24~0                                     ;    ;
+; MUL_OUT:U1|Mux23~0                                     ;    ;
+; MUL_OUT:U1|Mux22~0                                     ;    ;
+; MUL_OUT:U1|Mux21~0                                     ;    ;
+; MUL_OUT:U1|Mux20~0                                     ;    ;
+; MUL_OUT:U1|Mux19~0                                     ;    ;
+; MUL_OUT:U1|Mux18~0                                     ;    ;
+; MUL_OUT:U1|Mux17~0                                     ;    ;
+; MUL_OUT:U1|Mux16~0                                     ;    ;
+; MUL_OUT:U1|Mux15~0                                     ;    ;
+; MUL_OUT:U1|Mux14~0                                     ;    ;
+; MUL_OUT:U1|Mux13~0                                     ;    ;
+; MUL_OUT:U1|Mux12~0                                     ;    ;
+; MUL_OUT:U1|Mux11~0                                     ;    ;
+; MUL_OUT:U1|Mux10~0                                     ;    ;
+; MUL_OUT:U1|Mux9~0                                      ;    ;
+; MUL_OUT:U1|Mux8~0                                      ;    ;
+; MUL_OUT:U1|Mux7~0                                      ;    ;
+; MUL_OUT:U1|Mux6~0                                      ;    ;
+; MUL_OUT:U1|Mux5~0                                      ;    ;
+; MUL_OUT:U1|Mux4~0                                      ;    ;
+; MUL_OUT:U1|Mux3~0                                      ;    ;
+; MUL_OUT:U1|Mux2~0                                      ;    ;
+; MUL_OUT:U1|next_result~0                               ;    ;
+; Number of logic cells representing combinational loops ; 32 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                         ;
++----------------------------------------+-----------------------------------+
+; Register name                          ; Reason for Removal                ;
++----------------------------------------+-----------------------------------+
+; MUL_OUT:U1|result[63]                  ; Merged with MUL_OUT:U1|result[62] ;
+; MUL_OUT:U1|ad1[0..31]                  ; Lost fanout                       ;
+; Total Number of Removed Registers = 33 ;                                   ;
++----------------------------------------+-----------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 77    ;
+; Number of registers using Synchronous Clear  ; 31    ;
+; Number of registers using Synchronous Load   ; 31    ;
+; Number of registers using Asynchronous Clear ; 77    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 31    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 5:1                ; 31 bits   ; 93 LEs        ; 0 LEs                ; 93 LEs                 ; Yes        ; |MUL|MUL_OUT:U1|result[2]      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |MUL|MUL_OUT:U1|Mux0           ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |MUL|MUL_NS:U0|next_counter[5] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUL_NS:U0 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; IDLE           ; 00    ; Unsigned Binary               ;
+; EXEC           ; 01    ; Unsigned Binary               ;
+; DONE           ; 10    ; Unsigned Binary               ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MUL_OUT:U1 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; IDLE           ; 00    ; Unsigned Binary                ;
+; EXEC           ; 01    ; Unsigned Binary                ;
+; DONE           ; 10    ; Unsigned Binary                ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUL_OUT:U1|cla32:SUB"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; ci   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; s[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; co   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "MUL_OUT:U1|cla32:ADD"  ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; ci   ; Input  ; Info     ; Stuck at GND           ;
+; co   ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUL_NS:U0|cla8:UP"                                                                                                      ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                              ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+; a[7..6] ; Input  ; Info     ; Stuck at GND                                                                                                         ;
+; b[7..1] ; Input  ; Info     ; Stuck at GND                                                                                                         ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                                                         ;
+; ci      ; Input  ; Info     ; Stuck at GND                                                                                                         ;
+; s       ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "s[7..7]" have no fanouts ;
+; s[7]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
+; co      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 77                          ;
+;     CLR               ; 46                          ;
+;     ENA CLR SCLR SLD  ; 31                          ;
+; arriav_lcell_comb     ; 100                         ;
+;     normal            ; 100                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 13                          ;
+;         5 data inputs ; 41                          ;
+;         6 data inputs ; 23                          ;
+; boundary_port         ; 133                         ;
+;                       ;                             ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 5.28                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+    Info: Processing started: Mon Dec 07 14:51:02 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MUL -c MUL
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file mul.v
+    Info (12023): Found entity 1: MUL File: C:/Users/jjaa7/Desktop/MUL/MUL.v Line: 1
+    Info (12023): Found entity 2: MUL_NS File: C:/Users/jjaa7/Desktop/MUL/MUL.v Line: 27
+    Info (12023): Found entity 3: MUL_OUT File: C:/Users/jjaa7/Desktop/MUL/MUL.v Line: 127
+Info (12021): Found 1 design units, including 1 entities, in source file tb_mul.v
+    Info (12023): Found entity 1: tb_MUL File: C:/Users/jjaa7/Desktop/MUL/tb_MUL.v Line: 2
+Info (12021): Found 29 design units, including 29 entities, in source file gates+etc.v
+    Info (12023): Found entity 1: _inv_32bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 1
+    Info (12023): Found entity 2: _and2_32bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 7
+    Info (12023): Found entity 3: _or2_32bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 13
+    Info (12023): Found entity 4: _inv File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 20
+    Info (12023): Found entity 5: _xor2 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 26
+    Info (12023): Found entity 6: _xor2_4bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 38
+    Info (12023): Found entity 7: _xor2_32bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 47
+    Info (12023): Found entity 8: _inv_4bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 63
+    Info (12023): Found entity 9: _xnor2_4bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 69
+    Info (12023): Found entity 10: _xnor2_32bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 77
+    Info (12023): Found entity 11: fa_v2 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 93
+    Info (12023): Found entity 12: _and2 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 102
+    Info (12023): Found entity 13: _or2 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 108
+    Info (12023): Found entity 14: _and3 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 114
+    Info (12023): Found entity 15: _and4 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 120
+    Info (12023): Found entity 16: _and5 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 126
+    Info (12023): Found entity 17: _or3 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 132
+    Info (12023): Found entity 18: _or4 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 138
+    Info (12023): Found entity 19: _or5 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 144
+    Info (12023): Found entity 20: clb4 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 150
+    Info (12023): Found entity 21: cla4_ov File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 203
+    Info (12023): Found entity 22: cla32_ov File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 216
+    Info (12023): Found entity 23: mx2_64bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 236
+    Info (12023): Found entity 24: mx8_64bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 243
+    Info (12023): Found entity 25: mx2_32bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 257
+    Info (12023): Found entity 26: mx8_32bits File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 264
+    Info (12023): Found entity 27: cla4 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 280
+    Info (12023): Found entity 28: cla8 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 295
+    Info (12023): Found entity 29: cla32 File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 306
+Info (12127): Elaborating entity "MUL" for the top level hierarchy
+Info (12128): Elaborating entity "MUL_NS" for hierarchy "MUL_NS:U0" File: C:/Users/jjaa7/Desktop/MUL/MUL.v Line: 14
+Info (12128): Elaborating entity "cla8" for hierarchy "MUL_NS:U0|cla8:UP" File: C:/Users/jjaa7/Desktop/MUL/MUL.v Line: 42
+Info (12128): Elaborating entity "cla4" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 302
+Info (12128): Elaborating entity "fa_v2" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U0_fa_v2" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 288
+Info (12128): Elaborating entity "_xor2" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U0_fa_v2|_xor2:U0_xor2" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 97
+Info (12128): Elaborating entity "_inv" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U0_fa_v2|_xor2:U0_xor2|_inv:U0_inv" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 31
+Info (12128): Elaborating entity "_and2" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U0_fa_v2|_xor2:U0_xor2|_and2:U2_and2" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 33
+Info (12128): Elaborating entity "_or2" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|fa_v2:U0_fa_v2|_xor2:U0_xor2|_or2:U4_or2" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 35
+Info (12128): Elaborating entity "clb4" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|clb4:U4_clb4" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 292
+Info (12128): Elaborating entity "_and3" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|clb4:U4_clb4|_and3:U10_and3" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 185
+Info (12128): Elaborating entity "_or3" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|clb4:U4_clb4|_or3:U12_or3" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 187
+Info (12128): Elaborating entity "_and4" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|clb4:U4_clb4|_and4:U13_and4" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 190
+Info (12128): Elaborating entity "_or4" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|clb4:U4_clb4|_or4:U16_or4" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 193
+Info (12128): Elaborating entity "_and5" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|clb4:U4_clb4|_and5:U17_and5" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 196
+Info (12128): Elaborating entity "_or5" for hierarchy "MUL_NS:U0|cla8:UP|cla4:U0|clb4:U4_clb4|_or5:U21_or5" File: C:/Users/jjaa7/Desktop/MUL/gates+etc.v Line: 200
+Info (12128): Elaborating entity "MUL_OUT" for hierarchy "MUL_OUT:U1" File: C:/Users/jjaa7/Desktop/MUL/MUL.v Line: 20
+Info (12128): Elaborating entity "cla32" for hierarchy "MUL_OUT:U1|cla32:ADD" File: C:/Users/jjaa7/Desktop/MUL/MUL.v Line: 144
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/jjaa7/Desktop/MUL/output_files/MUL.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 297 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
+    Info (21059): Implemented 65 output pins
+    Info (21061): Implemented 164 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 5046 megabytes
+    Info: Processing ended: Mon Dec 07 14:51:12 2020
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/jjaa7/Desktop/MUL/output_files/MUL.map.smsg.
+
+

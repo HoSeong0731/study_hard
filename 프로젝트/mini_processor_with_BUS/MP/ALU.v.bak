@@ -1,0 +1,20 @@
+module ALU(a, b, op, result, c, n, z, v);
+input [63:0] a, b;		//input 64bit a, b
+input [3:0] op;			//input 4bit operation
+output [63:0] result;	//64bit result
+output c, n, z, v;		//output condition register
+wire [63:0] w_not_a, w_not_b, w_and, w_or, w_xor, w_xnor, w_add, w_sub;	//wire logic
+wire co_prev_add, co_add, co_prev_sub, co_sub;									//wire Add, Sub
+_inv_64bits U0_inv_64bits (.a(a), .y(w_not_a));									//load 64bit not gate
+_inv_64bits U1_inv_64bits (.a(b), .y(w_not_b));									//load 64bit not gate
+_and2_64bits U2_and2_64bits (.a(a), .b(b), .y(w_and));						//load 64bit 2input and gate
+_or2_64bits U3_or2_64bits (.a(a), .b(b), .y(w_or));							//load 64bit 2input or gate
+_xor2_64bits U4_xor2_64bits (.a(a), .b(b), .y(w_xor));						//load 64bit 2input xor gate
+_xnor2_64bits U5_xnor2_64bits (.a(a), .b(b), .y(w_xnor));					//load 64bit 2input xnor gate
+cla64_ov U6_add (.a(a), .b(b), .ci(1'b0), .s(w_add), .co_prev(co_prev_add), .co(co_add));			//load 64bit add
+cla64_ov U7_sub (.a(a), .b(w_not_b), .ci(1'b1), .s(w_sub), .co_prev(co_prev_sub), .co(co_sub));	//load 64bit sub(A + (-B))
+mx8_64bits U8_mx8_64bits (.y(result), .a(w_not_a), .b(w_not_b), .c(w_and), .d(w_or), .e(w_xor),.f(w_xnor), .g(w_add), .h(w_sub), .s2(op[3]), .s1(op[2]), .s0(op[1]));
+//load 32bit mux8
+cal_flags64 U9_cal_flags64(.op(op[3:1]), .result(result),.co_add(co_add), .co_prev_add(co_prev_add),.co_sub(co_sub), .co_prev_sub(co_prev_sub),.c(c), .n(n), .z(z), .v(v));
+//load condition register calculate
+endmodule

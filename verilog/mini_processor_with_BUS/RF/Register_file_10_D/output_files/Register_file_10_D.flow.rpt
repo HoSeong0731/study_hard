@@ -1,0 +1,128 @@
+Flow report for Register_file_10_D
+Tue Dec 08 21:52:26 2020
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Tue Dec 08 21:52:26 2020       ;
+; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
+; Revision Name                   ; Register_file_10_D                          ;
+; Top-level Entity Name           ; Register_file_10_D                          ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSXFC6D6F31C6                              ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 640                                         ;
+; Total pins                      ; 243                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/08/2020 21:52:16 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Register_file_10_D  ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                   ;
++--------------------------------------+---------------------------------------+---------------+-------------+-----------------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id            ;
++--------------------------------------+---------------------------------------+---------------+-------------+-----------------------+
+; COMPILER_SIGNATURE_ID                ; 929355109236.160743193613568          ; --            ; --          ; --                    ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; tb_Register_file_10_D ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Register_file_10_D                 ; --            ; --          ; eda_simulation        ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation        ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --                    ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation        ;
+; EDA_TEST_BENCH_FILE                  ; tb_Register_file_10_D.v               ; --            ; --          ; tb_Register_file_10_D ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_Register_file_10_D                 ; --            ; --          ; tb_Register_file_10_D ;
+; EDA_TEST_BENCH_NAME                  ; tb_Register_file_10_D                 ; --            ; --          ; eda_simulation        ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation        ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                    ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                    ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; --          ; Top                   ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top                   ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; --          ; Top                   ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --                    ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --                    ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --                    ;
++--------------------------------------+---------------------------------------+---------------+-------------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 5023 MB             ; 00:00:20                           ;
+; Total                ; 00:00:10     ; --                      ; --                  ; 00:00:20                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-SAVO7VV  ; Windows 8 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Register_file_10_D -c Register_file_10_D
+
+
+

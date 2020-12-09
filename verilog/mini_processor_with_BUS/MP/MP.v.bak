@@ -1,0 +1,9 @@
+module MP(Clk, Reset_n, S_wr, S_addr, S_din, S_dout, Interrupt_out);
+
+	input Clk, Reset_n, S_wr;
+	input [15:0] S_addr;
+	input [31:0] S_din;
+	output [63:0] S_dout;
+	output Interrupt_out;
+	
+endmodule

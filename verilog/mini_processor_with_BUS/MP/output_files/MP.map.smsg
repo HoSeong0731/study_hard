@@ -1,0 +1,11 @@
+Warning (10268): Verilog HDL information at MUL.v(50): always construct contains both blocking and non-blocking assignments File: C:/Users/jjaa7/Desktop/MP/MUL.v Line: 50
+Warning (10273): Verilog HDL warning at MUL.v(117): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/MP/MUL.v Line: 117
+Warning (10273): Verilog HDL warning at MUL.v(118): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/MP/MUL.v Line: 118
+Warning (10268): Verilog HDL information at MUL.v(64): always construct contains both blocking and non-blocking assignments File: C:/Users/jjaa7/Desktop/MP/MUL.v Line: 64
+Warning (10268): Verilog HDL information at MUL.v(160): always construct contains both blocking and non-blocking assignments File: C:/Users/jjaa7/Desktop/MP/MUL.v Line: 160
+Info (10281): Verilog HDL Declaration information at MUL.v(135): object "add" differs only in case from object "ADD" in the same scope File: C:/Users/jjaa7/Desktop/MP/MUL.v Line: 135
+Info (10281): Verilog HDL Declaration information at MUL.v(135): object "sub" differs only in case from object "SUB" in the same scope File: C:/Users/jjaa7/Desktop/MP/MUL.v Line: 135
+Warning (10273): Verilog HDL warning at RF.v(35): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/MP/RF.v Line: 35
+Warning (10273): Verilog HDL warning at RF.v(79): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/MP/RF.v Line: 79
+Warning (10273): Verilog HDL warning at RF.v(128): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/MP/RF.v Line: 128
+Warning (10273): Verilog HDL warning at RF.v(173): extended using "x" or "z" File: C:/Users/jjaa7/Desktop/MP/RF.v Line: 173

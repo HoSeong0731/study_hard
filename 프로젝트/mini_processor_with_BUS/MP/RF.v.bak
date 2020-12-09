@@ -1,0 +1,19 @@
+module RF();
+
+	
+	DATA_REG U1_DATA_REG();
+	
+	INST_REG U2_INST_REG();
+	
+	CONT_REG U3_CONT_REG();
+	
+endmodule
+
+module DATA_REG();
+endmodule
+
+module INST_REG();
+endmodule
+
+module CONT_REG();
+endmodule

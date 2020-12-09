@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Dec 07 14:51:12 2020
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Revision Name : MUL
+Top-level Entity Name : MUL
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 77
+Total pins : 133
+Total virtual pins : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0
