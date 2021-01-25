@@ -1,0 +1,9 @@
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\bin\Release\SimpleMessenger.exe.config
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\bin\Release\SimpleMessenger.exe
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\bin\Release\SimpleMessenger.pdb
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Release\SimpleMessenger.Messenger.resources
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Release\SimpleMessenger.Properties.Resources.resources
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Release\SimpleMessenger.csproj.GenerateResource.cache
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Release\SimpleMessenger.csproj.CoreCompileInputs.cache
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Release\SimpleMessenger.exe
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Release\SimpleMessenger.pdb

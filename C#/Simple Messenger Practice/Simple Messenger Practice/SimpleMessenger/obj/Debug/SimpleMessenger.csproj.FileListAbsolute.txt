@@ -1,0 +1,30 @@
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\bin\Debug\SimpleMessenger.exe.config
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\bin\Debug\SimpleMessenger.exe
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\bin\Debug\SimpleMessenger.pdb
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\obj\Debug\SimpleMessenger.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\obj\Debug\SimpleMessenger.Messenger.resources
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\obj\Debug\SimpleMessenger.Properties.Resources.resources
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\obj\Debug\SimpleMessenger.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\obj\Debug\SimpleMessenger.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\obj\Debug\SimpleMessenger.exe
+C:\Users\HP\source\repos\InternshipPractice\SimpleMessenger\obj\Debug\SimpleMessenger.pdb
+D:\김환진\7월 1주차\SimpleMessenger\bin\Debug\SimpleMessenger.exe.config
+D:\김환진\7월 1주차\SimpleMessenger\bin\Debug\SimpleMessenger.exe
+D:\김환진\7월 1주차\SimpleMessenger\bin\Debug\SimpleMessenger.pdb
+D:\김환진\7월 1주차\SimpleMessenger\obj\Debug\SimpleMessenger.csprojAssemblyReference.cache
+D:\김환진\7월 1주차\SimpleMessenger\obj\Debug\SimpleMessenger.Messenger.resources
+D:\김환진\7월 1주차\SimpleMessenger\obj\Debug\SimpleMessenger.Properties.Resources.resources
+D:\김환진\7월 1주차\SimpleMessenger\obj\Debug\SimpleMessenger.csproj.GenerateResource.cache
+D:\김환진\7월 1주차\SimpleMessenger\obj\Debug\SimpleMessenger.csproj.CoreCompileInputs.cache
+D:\김환진\7월 1주차\SimpleMessenger\obj\Debug\SimpleMessenger.exe
+D:\김환진\7월 1주차\SimpleMessenger\obj\Debug\SimpleMessenger.pdb
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\bin\Debug\SimpleMessenger.exe.config
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\bin\Debug\SimpleMessenger.exe
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\bin\Debug\SimpleMessenger.pdb
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Debug\SimpleMessenger.csprojAssemblyReference.cache
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Debug\SimpleMessenger.Messenger.resources
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Debug\SimpleMessenger.Properties.Resources.resources
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Debug\SimpleMessenger.csproj.GenerateResource.cache
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Debug\SimpleMessenger.csproj.CoreCompileInputs.cache
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Debug\SimpleMessenger.exe
+C:\Users\jjaa7\Desktop\Simple Messenger Practice\Simple Messenger Practice\SimpleMessenger\obj\Debug\SimpleMessenger.pdb
